@@ -1,6 +1,6 @@
-package v1ch04.PackageTest;
+package v1ch04._6_PackageTest;
 
-import v1ch04.PackageTest.com.horstmann.corejava.Employee;
+import v1ch04._6_PackageTest.com.horstmann.corejava.Employee;
 // the Employee class is defined in that package
 
 import static java.lang.System.*;

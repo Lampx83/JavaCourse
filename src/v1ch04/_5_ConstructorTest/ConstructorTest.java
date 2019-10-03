@@ -1,4 +1,4 @@
-package v1ch04.ConstructorTest;
+package v1ch04._5_ConstructorTest;
 
 import java.util.*;
 
