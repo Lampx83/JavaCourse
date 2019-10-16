@@ -31,8 +31,7 @@ public class LotteryArray
          }
 
       // print triangular array
-      for (int[] row : odds)
-      {
+      for (int[] row : odds){
          for (int odd : row)
             System.out.printf("%4d", odd);
          System.out.println();

@@ -1,5 +1,6 @@
 package v1ch03._5_LotteryOdds;
 
+import java.math.BigInteger;
 import java.util.*;
 
 /**
@@ -11,22 +12,20 @@ public class LotteryOdds
 {
    public static void main(String[] args)
    {
-      Scanner in = new Scanner(System.in);
+      BigInteger b = new BigInteger("12229393895949292392392312423057340238428402340238402384023804182391222939389594929239239231242305734023842840234023840238402380418239");
 
-      System.out.print("How many numbers do you need to draw? ");
-      int k = in.nextInt();
+      BigInteger a = new BigInteger("02384023804182391222939389594929239239231242305734023842840234023840238402380418239");
 
-      System.out.print("What is the highest number you can draw? ");
-      int n = in.nextInt();
 
-      /*
-       * compute binomial coefficient n*(n-1)*(n-2)*...*(n-k+1)/(1*2*3*...*k)
-       */
+      BigInteger c = b.multiply(a);
 
-      int lotteryOdds = 1;
-      for (int i = 1; i <= k; i++)
-         lotteryOdds = lotteryOdds * (n - i + 1) / i;
+      System.out.print(c);
 
-      System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+
    }
 }
+
+
+
+
+

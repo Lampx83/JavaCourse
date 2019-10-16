@@ -14,10 +14,10 @@ public class BigIntegerTest
    {
       Scanner in = new Scanner(System.in);
 
-      System.out.print("How many numbers do you need to draw? ");
+      System.out.print("How many numbers do you need to _3_draw? ");
       int k = in.nextInt();
 
-      System.out.print("What is the highest number you can draw? ");
+      System.out.print("What is the highest number you can _3_draw? ");
       int n = in.nextInt();
 
       /*

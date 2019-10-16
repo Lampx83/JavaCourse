@@ -4,38 +4,58 @@ import java.util.*;
 
 /**
  * This program demonstrates a <code>while</code> loop.
- * @version 1.20 2004-02-10
+ *
  * @author Cay Horstmann
+ * @version 1.20 2004-02-10
  */
-public class Retirement
-{
-   public static void main(String[] args)
-   {
-      // read inputs
-      Scanner in = new Scanner(System.in);
+public class Retirement {
+    public static void main(String[] args) {
 
-      System.out.print("How much money do you need to retire? ");
-      double goal = in.nextDouble();
+        Scanner nhap = new Scanner(System.in);
 
-      System.out.print("How much money will you contribute every year? ");
-      double payment = in.nextDouble();
+        System.out.print("Bạn cần bao nhiêu tiền khi nghỉ hưu:");
+        float muctieu = nhap.nextFloat();
 
-      System.out.print("Interest rate in %: ");
-      double interestRate = in.nextDouble();
 
-      double balance = 0;
-      int years = 0;
+        System.out.print("Số tiền để dành mỗi tháng của bạn:");
+        float tietkiem = nhap.nextFloat();
 
-      // update account balance while goal isn't reached
-      while (balance < goal)
-      {
-         // add this year's payment and interest
-         balance += payment;
-         double interest = balance * interestRate / 100;
-         balance += interest;
-         years++;
-      }
+        int nam = 0;
+        float tongtien = 0;
 
-      System.out.println("You can retire in " + years + " years.");
-   }
+        while (tongtien < muctieu) {
+            nam++;
+            tongtien = tongtien + tietkiem;
+        }
+
+        System.out.print("Bạn có thể nghỉ hưu sau " + nam + " năm");
+
+
+//      // read inputs
+//      Scanner in = new Scanner(System.in);
+//
+//      System.out.print("How much money do you need to retire? ");
+//      double goal = in.nextDouble();
+//
+//      System.out.print("How much money will you contribute every year? ");
+//      double payment = in.nextDouble();
+//
+//      System.out.print("Interest rate in %: ");
+//      double interestRate = in.nextDouble();
+//
+//      double balance = 0;
+//      int years = 0;
+//
+//      // update account balance while goal isn't reached
+//      while (balance < goal)
+//      {
+//         // add this year's payment and interest
+//         balance += payment;
+//         double interest = balance * interestRate / 100;
+//         balance += interest;
+//         years++;
+//      }
+//
+//      System.out.println("You can retire in " + years + " years.");
+    }
 }

@@ -37,7 +37,7 @@ class Employee
    static
    {
       var generator = new Random();
-      // set nextId to a random number between 0 and 9999
+      // _2_set nextId to a random number between 0 and 9999
       nextId = generator.nextInt(10000);
    }
 
@@ -64,7 +64,7 @@ class Employee
    public Employee()
    {
       // name initialized to ""--see above
-      // salary not explicitly set--initialized to 0
+      // salary not explicitly _2_set--initialized to 0
       // id initialized in initialization block
    }
 
