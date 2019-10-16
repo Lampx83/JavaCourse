@@ -1,6 +1,6 @@
 package v1ch04._2_EmployeeTest;
 
-import java.time.*;
+import java.time.LocalDate;
 
 public class EmployeeTest {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class EmployeeTest {
         // raise everyone's salary by 5%
         for (Employee e : staff)
             e.raiseSalary(5);
-        // print out information about all Employee objects
+        // _15_print out information about all Employee objects
         for (Employee e : staff)
             System.out.println("name=" + e.name + ",salary=" + e.salary + ",hireDay=" + e.hireDay);
 

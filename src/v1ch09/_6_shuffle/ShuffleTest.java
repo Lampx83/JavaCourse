@@ -1,6 +1,8 @@
 package v1ch09._6_shuffle;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * This program demonstrates the random _6_shuffle and sort algorithms.

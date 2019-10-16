@@ -1,17 +1,15 @@
 package v1ch05._2_abstractClasses;
 
-public abstract class Person
-{
-   public abstract String getDescription();
-   private String name;
+public abstract class Person {
+    public abstract String getDescription();
 
-   public Person(String name)
-   {
-      this.name = name;
-   }
+    private String name;
 
-   public String getName()
-   {
-      return name;
-   }
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

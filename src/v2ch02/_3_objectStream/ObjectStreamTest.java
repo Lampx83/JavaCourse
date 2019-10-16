@@ -3,43 +3,39 @@ package v2ch02._3_objectStream;
 import java.io.*;
 
 /**
- * @version 1.11 2018-05-01
  * @author Cay Horstmann
+ * @version 1.11 2018-05-01
  */
-class ObjectStreamTest
-{
-   public static void main(String[] args) throws IOException, ClassNotFoundException
-   {
-      var harry = new Employee("Harry Hacker", 50000, 1989, 10, 1);
-      var carl = new Manager("Carl Cracker", 80000, 1987, 12, 15);
-      carl.setSecretary(harry);
-      var tony = new Manager("Tony Tester", 40000, 1990, 3, 15);
-      tony.setSecretary(harry);
+class ObjectStreamTest {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        var harry = new Employee("Harry Hacker", 50000, 1989, 10, 1);
+        var carl = new Manager("Carl Cracker", 80000, 1987, 12, 15);
+        carl.setSecretary(harry);
+        var tony = new Manager("Tony Tester", 40000, 1990, 3, 15);
+        tony.setSecretary(harry);
 
-      var staff = new Employee[3];
+        var staff = new Employee[3];
 
-      staff[0] = carl;
-      staff[1] = harry;
-      staff[2] = tony;
+        staff[0] = carl;
+        staff[1] = harry;
+        staff[2] = tony;
 
-      // save all employee records to the file employee.dat         
-      try (var out = new ObjectOutputStream(new FileOutputStream("employee.dat"))) 
-      {
-         out.writeObject(staff);
-      }
+        // save all _4_employee records to the file _4_employee.dat
+        try (var out = new ObjectOutputStream(new FileOutputStream("_4_employee.dat"))) {
+            out.writeObject(staff);
+        }
 
-      try (var in = new ObjectInputStream(new FileInputStream("employee.dat")))
-      {
-         // retrieve all records into a new array
-         
-         var newStaff = (Employee[]) in.readObject();
+        try (var in = new ObjectInputStream(new FileInputStream("_4_employee.dat"))) {
+            // retrieve all records into a new array
 
-         // raise secretary's salary
-         newStaff[1].raiseSalary(10);
+            var newStaff = (Employee[]) in.readObject();
 
-         // print the newly _2_read employee records
-         for (Employee e : newStaff)
-            System.out.println(e);
-      }
-   }
+            // raise secretary's salary
+            newStaff[1].raiseSalary(10);
+
+            // _15_print the newly _2_read _4_employee records
+            for (Employee e : newStaff)
+                System.out.println(e);
+        }
+    }
 }

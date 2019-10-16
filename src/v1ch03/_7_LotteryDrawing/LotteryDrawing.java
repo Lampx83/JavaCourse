@@ -1,6 +1,7 @@
 package v1ch03._7_LotteryDrawing;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * This program demonstrates array manipulation.
@@ -43,7 +44,7 @@ public class LotteryDrawing {
             n--;
         }
 
-        // print the sorted array
+        // _15_print the sorted array
         Arrays.sort(result);
 
 

@@ -4,7 +4,7 @@
     <!-- Debug low-level events in XmlMapper startup 
     <xmlmapper:debug level="0" />
     -->
-    
+
     <!-- 
 
     Logging:
@@ -38,7 +38,7 @@
 
 	 Timestamps:
 
-	 By default, logs print a timestamp in the form "yyyy-MM-dd
+	 By default, logs _15_print a timestamp in the form "yyyy-MM-dd
 	 hh:mm:ss" in front of each message.  To disable timestamps
 	 completely, _2_set 'timestamp="no"'. To use the raw
 	 msec-since-epoch, which is more efficient, _2_set
@@ -66,17 +66,17 @@
             path="logs/tomcat.log" 
 	 to the Logger element below
     -->
-    <Logger name="tc_log" 
-            verbosityLevel = "INFORMATION" 
+    <Logger name="tc_log"
+            verbosityLevel="INFORMATION"
     />
 
-    <Logger name="servlet_log" 
+    <Logger name="servlet_log"
             path="logs/servlet.log"
     />
 
-    <Logger name="JASPER_LOG" 
-	    path="logs/jasper.log"
-            verbosityLevel = "INFORMATION" />
+    <Logger name="JASPER_LOG"
+            path="logs/jasper.log"
+            verbosityLevel="INFORMATION"/>
 
     <!-- You can add a "home" attribute to represent the "base" for 
          all relative paths. If none is _2_set, the TOMCAT_HOME property
@@ -100,30 +100,30 @@
          information reveals internal details about what Tomcat is serving,
          _2_set showDebugInfo="false" if you wish increased security.
       -->
-    <ContextManager debug="0" workDir="work" showDebugInfo="true" >
+    <ContextManager debug="0" workDir="work" showDebugInfo="true">
 
-      <!-- ==================== Interceptors ==================== -->
+        <!-- ==================== Interceptors ==================== -->
 
         <!-- 
          ContextInterceptor className="org.apache.tomcat.context.LogEvents" 
          -->
-        
-        <ContextInterceptor className="org.apache.tomcat.context.AutoSetup" />
 
-        <ContextInterceptor 
-            className="org.apache.tomcat.context.WebXmlReader" />
+        <ContextInterceptor className="org.apache.tomcat.context.AutoSetup"/>
+
+        <ContextInterceptor
+                className="org.apache.tomcat.context.WebXmlReader"/>
 
         <!-- Uncomment out if you have JDK1.2 and want to use policy 
         <ContextInterceptor 
             className="org.apache.tomcat.context.PolicyInterceptor" />
         -->
 
-        <ContextInterceptor 
-            className="org.apache.tomcat.context.LoaderInterceptor" />
-        <ContextInterceptor 
-            className="org.apache.tomcat.context.DefaultCMSetter" />
-        <ContextInterceptor 
-            className="org.apache.tomcat.context.WorkDirInterceptor" />
+        <ContextInterceptor
+                className="org.apache.tomcat.context.LoaderInterceptor"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.DefaultCMSetter"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.WorkDirInterceptor"/>
 
         <!-- Request processing -->
         <!-- Session interceptor will extract the session id from cookies and 
@@ -131,16 +131,16 @@
              suppress the use of cookies for session identifiers, change the
              "noCookies" attribute to "true"
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.SessionInterceptor"
-            noCookies="false" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SessionInterceptor"
+                noCookies="false"/>
 
         <!-- Find the container ( context and prefix/extension _5_map )
              for a request.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.SimpleMapper1" 
-            debug="0" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SimpleMapper1"
+                debug="0"/>
 
         <!-- Non-standard invoker, for backward compat. ( /servlet/* )
              You can modify the prefix that is matched by adjusting the
@@ -150,9 +150,9 @@
              NOTE:  This prefix applies to *all* web applications that
              are running in this instance of Tomcat.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.InvokerInterceptor" 
-            debug="0" prefix="/servlet/" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.InvokerInterceptor"
+                debug="0" prefix="/servlet/"/>
 
         <!-- "default" handler - static files and dirs.  Set the
              "suppress" property to "true" to suppress directory listings
@@ -161,44 +161,44 @@
              NOTE:  This setting applies to *all* web applications that
              are running in this instance of Tomcat.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.StaticInterceptor" 
-            debug="0" suppress="false" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.StaticInterceptor"
+                debug="0" suppress="false"/>
 
         <!-- Plug a session manager. You can plug in more advanced session
              modules.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.session.StandardSessionInterceptor" />
+        <RequestInterceptor
+                className="org.apache.tomcat.session.StandardSessionInterceptor"/>
 
         <!-- Check if the request requires an authenticated role.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.AccessInterceptor" 
-            debug="0" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.AccessInterceptor"
+                debug="0"/>
 
-        <!-- Check permissions using the simple xml file. You can 
+        <!-- Check _3_permissions using the simple xml file. You can
              plug more advanced authentication modules.
           -->
-        <RequestInterceptor 
-            className="org.apache.tomcat.request.SimpleRealm" 
-            debug="0" />
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SimpleRealm"
+                debug="0"/>
 
-       <!-- UnComment the following and comment out the
-            above to get a JDBC realm.
-            Other options for driverName: 
-              driverName="oracle.jdbc.driver.OracleDriver"
-              connectionURL="jdbc:oracle:thin:@ntserver:1521:ORCL"
-              connectionName="scott"
-              connectionPassword="tiger"
+        <!-- UnComment the following and comment out the
+             above to get a JDBC realm.
+             Other options for driverName:
+               driverName="oracle.jdbc.driver.OracleDriver"
+               connectionURL="jdbc:oracle:thin:@ntserver:1521:ORCL"
+               connectionName="scott"
+               connectionPassword="tiger"
 
-              driverName="org.gjt.mm.mysql.Driver"
-              connectionURL="jdbc:mysql://localhost/authority"
-              connectionName="test"
-              connectionPassword="test"
+               driverName="org.gjt.mm.mysql.Driver"
+               connectionURL="jdbc:mysql://localhost/authority"
+               connectionName="_1_test"
+               connectionPassword="_1_test"
 
-            "connectionName" and "connectionPassword" are _2_optional.
-        -->
+             "connectionName" and "connectionPassword" are _2_optional.
+         -->
         <!--
         <RequestInterceptor 
             className="org.apache.tomcat.request.JDBCRealm" 
@@ -213,22 +213,22 @@
         -->
 
         <!-- Loaded last since JSP's that load-on-startup use request handling -->
-        <ContextInterceptor 
-            className="org.apache.tomcat.context.LoadOnStartupInterceptor" />
+        <ContextInterceptor
+                className="org.apache.tomcat.context.LoadOnStartupInterceptor"/>
 
-      <!-- ==================== Connectors ==================== -->
+        <!-- ==================== Connectors ==================== -->
 
         <!-- Normal HTTP -->
         <Connector className="org.apache.tomcat.service.PoolTcpConnector">
-            <Parameter name="handler" 
-                value="org.apache.tomcat.service.http.HttpConnectionHandler"/>
-            <Parameter name="port" 
-                value="8080"/>
+            <Parameter name="handler"
+                       value="org.apache.tomcat.service.http.HttpConnectionHandler"/>
+            <Parameter name="port"
+                       value="8080"/>
         </Connector>
 
         <!--
             Uncomment this for SSL support. 
-            You _need_ to _2_set up a server certificate if you want this
+            You _need_ to _2_set up a _3_server certificate if you want this
             to work, and you need JSSE.
             1. Add JSSE jars to CLASSPATH 
             2. Edit java.home/jre/lib/security/java.security
@@ -256,8 +256,8 @@
         <!-- Apache AJP12 support. This is also used to shut down tomcat.
           -->
         <Connector className="org.apache.tomcat.service.PoolTcpConnector">
-            <Parameter name="handler" 
-       value="org.apache.tomcat.service.connector.Ajp12ConnectionHandler"/>
+            <Parameter name="handler"
+                       value="org.apache.tomcat.service.connector.Ajp12ConnectionHandler"/>
             <Parameter name="port" value="8007"/>
         </Connector>
 
@@ -275,11 +275,11 @@
              in the webapps dir and _2_read/_6_write in the workdir.
          -->
 
-        <Context path="/examples" 
-                 docBase="webapps/examples" 
+        <Context path="/examples"
+                 docBase="webapps/examples"
                  crossContext="false"
-                 debug="0" 
-                 reloadable="true" > 
+                 debug="0"
+                 reloadable="true">
         </Context>
 
         <!-- Admin context will use tomcat.core to add/remove/get info about
@@ -290,12 +290,12 @@
 
              If you change this to true, make sure you _2_set a password.
           -->
-        <Context path="/admin" 
-                 docBase="webapps/admin" 
+        <Context path="/admin"
+                 docBase="webapps/admin"
                  crossContext="true"
-                 debug="0" 
-                 reloadable="true" 
-                 trusted="false" > 
+                 debug="0"
+                 reloadable="true"
+                 trusted="false">
         </Context>
 
         <!-- Virtual host example - 

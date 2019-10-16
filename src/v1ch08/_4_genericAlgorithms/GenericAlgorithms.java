@@ -1,8 +1,8 @@
 package v1ch08._4_genericAlgorithms;
 
-import java.lang.reflect.*;
-import java.util.*;
-import java.util.function.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.function.IntFunction;
 
 /**
  * @author Cay Horstmann
@@ -19,7 +19,7 @@ public class GenericAlgorithms {
         String[] ss = ArrayAlg.minmax("Tom", "Dick", "Harry");
         System.out.println(Arrays.toString(ss));
 
-    //    ss = ArrayAlg.minmax(String[]::new, "Tom", "Dick", "Harry");
+        //    ss = ArrayAlg.minmax(String[]::new, "Tom", "Dick", "Harry");
         System.out.println(Arrays.toString(ss));
     }
 }

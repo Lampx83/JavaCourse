@@ -1,54 +1,49 @@
 package v2ch02._3_objectStream;
 
-import java.io.*;
-import java.time.*;
+import java.io.Serializable;
+import java.time.LocalDate;
 
-public class Employee implements Serializable
-{
-   private String name;
-   private double salary;
-   private LocalDate hireDay;
+public class Employee implements Serializable {
+    private String name;
+    private double salary;
+    private LocalDate hireDay;
 
-   public Employee() {}
+    public Employee() {
+    }
 
-   public Employee(String n, double s, int year, int month, int day)
-   {  
-      name = n;
-      salary = s;
-      hireDay = LocalDate.of(year, month, day);
-   }
+    public Employee(String n, double s, int year, int month, int day) {
+        name = n;
+        salary = s;
+        hireDay = LocalDate.of(year, month, day);
+    }
 
-   public String getName()
-   {
-      return name;
-   }
+    public String getName() {
+        return name;
+    }
 
-   public double getSalary()
-   {
-      return salary;
-   }
+    public double getSalary() {
+        return salary;
+    }
 
-   public LocalDate getHireDay()
-   {
-      return hireDay;
-   }
+    public LocalDate getHireDay() {
+        return hireDay;
+    }
 
-   /**
-      Raises the salary of this employee.
-      @byPercent the percentage of the raise
-   */
-   public void raiseSalary(double byPercent)
-   {  
-      double raise = salary * byPercent / 100;
-      salary += raise;
-   }
+    /**
+     * Raises the salary of this _4_employee.
+     *
+     * @byPercent the percentage of the raise
+     */
+    public void raiseSalary(double byPercent) {
+        double raise = salary * byPercent / 100;
+        salary += raise;
+    }
 
-   public String toString()
-   {  
-      return getClass().getName()
-         + "[name=" + name
-         + ",salary=" + salary
-         + ",hireDay=" + hireDay
-         + "]";
-   }
+    public String toString() {
+        return getClass().getName()
+                + "[name=" + name
+                + ",salary=" + salary
+                + ",hireDay=" + hireDay
+                + "]";
+    }
 }

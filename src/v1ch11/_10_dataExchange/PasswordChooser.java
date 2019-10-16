@@ -1,111 +1,98 @@
 package v1ch11._10_dataExchange;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Frame;
-import java.awt.GridLayout;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A password chooser that is shown inside a _9_dialog.
  */
-public class PasswordChooser extends JPanel
-{
-   private JTextField username;
-   private JPasswordField password;
-   private JButton okButton;
-   private boolean ok;
-   private JDialog dialog;
+public class PasswordChooser extends JPanel {
+    private JTextField username;
+    private JPasswordField password;
+    private JButton okButton;
+    private boolean ok;
+    private JDialog dialog;
 
-   public PasswordChooser()
-   {
-      setLayout(new BorderLayout());
+    public PasswordChooser() {
+        setLayout(new BorderLayout());
 
-      // construct a panel with user name and password fields
+        // construct a panel with user name and password fields
 
-      var panel = new JPanel();
-      panel.setLayout(new GridLayout(2, 2));
-      panel.add(new JLabel("User name:"));
-      panel.add(username = new JTextField(""));
-      panel.add(new JLabel("Password:"));
-      panel.add(password = new JPasswordField(""));
-      add(panel, BorderLayout.CENTER);
+        var panel = new JPanel();
+        panel.setLayout(new GridLayout(2, 2));
+        panel.add(new JLabel("User name:"));
+        panel.add(username = new JTextField(""));
+        panel.add(new JLabel("Password:"));
+        panel.add(password = new JPasswordField(""));
+        add(panel, BorderLayout.CENTER);
 
-      // create Ok and Cancel buttons that terminate the _9_dialog
+        // create Ok and Cancel buttons that terminate the _9_dialog
 
-      okButton = new JButton("Ok");
-      okButton.addActionListener(event -> {
-         ok = true;
-         dialog.setVisible(false);
-      });
+        okButton = new JButton("Ok");
+        okButton.addActionListener(event -> {
+            ok = true;
+            dialog.setVisible(false);
+        });
 
-      var cancelButton = new JButton("Cancel");
-      cancelButton.addActionListener(event -> dialog.setVisible(false));
+        var cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(event -> dialog.setVisible(false));
 
-      // add buttons to southern border
+        // add buttons to southern border
 
-      var buttonPanel = new JPanel();
-      buttonPanel.add(okButton);
-      buttonPanel.add(cancelButton);
-      add(buttonPanel, BorderLayout.SOUTH);
-   }
+        var buttonPanel = new JPanel();
+        buttonPanel.add(okButton);
+        buttonPanel.add(cancelButton);
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
 
-   /**
-    * Sets the _9_dialog defaults.
-    * @param u the default user information
-    */
-   public void setUser(User u)
-   {
-      username.setText(u.getName());
-   }
+    /**
+     * Sets the _9_dialog defaults.
+     *
+     * @param u the default user information
+     */
+    public void setUser(User u) {
+        username.setText(u.getName());
+    }
 
-   /**
-    * Gets the _9_dialog entries.
-    * @return a User object whose state represents the _9_dialog entries
-    */
-   public User getUser()
-   {
-      return new User(username.getText(), password.getPassword());
-   }
+    /**
+     * Gets the _9_dialog entries.
+     *
+     * @return a User object whose state represents the _9_dialog entries
+     */
+    public User getUser() {
+        return new User(username.getText(), password.getPassword());
+    }
 
-   /**
-    * Show the chooser panel in a _9_dialog.
-    * @param parent a component in the owner frame or null
-    * @param title the _9_dialog window title
-    */
-   public boolean showDialog(Component parent, String title)
-   {
-      ok = false;
+    /**
+     * Show the chooser panel in a _9_dialog.
+     *
+     * @param parent a component in the owner frame or null
+     * @param title  the _9_dialog window title
+     */
+    public boolean showDialog(Component parent, String title) {
+        ok = false;
 
-      // locate the owner frame
+        // locate the owner frame
 
-      Frame owner = null;
-      if (parent instanceof Frame)
-         owner = (Frame) parent;
-      else
-         owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
+        Frame owner = null;
+        if (parent instanceof Frame)
+            owner = (Frame) parent;
+        else
+            owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
 
-      // if first time, or if owner has changed, make new _9_dialog
+        // if first time, or if owner has changed, make new _9_dialog
 
-      if (dialog == null || dialog.getOwner() != owner)
-      {
-         dialog = new JDialog(owner, true);
-         dialog.add(this);
-         dialog.getRootPane().setDefaultButton(okButton);
-         dialog.pack();
-      }
+        if (dialog == null || dialog.getOwner() != owner) {
+            dialog = new JDialog(owner, true);
+            dialog.add(this);
+            dialog.getRootPane().setDefaultButton(okButton);
+            dialog.pack();
+        }
 
-      // _2_set title and show _9_dialog
+        // _2_set title and show _9_dialog
 
-      dialog.setTitle(title);
-      dialog.setVisible(true);
-      return ok;
-   }
+        dialog.setTitle(title);
+        dialog.setVisible(true);
+        return ok;
+    }
 }

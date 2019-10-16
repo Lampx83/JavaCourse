@@ -1,6 +1,6 @@
 package v1ch05._5_enums;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * This program demonstrates enumerated types.

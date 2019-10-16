@@ -1,20 +1,19 @@
 package v1ch05._8_objectAnalyzer;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * This program uses _7_reflection to spy on objects.
- * @version 1.13 2018-03-16
+ *
  * @author Cay Horstmann
+ * @version 1.13 2018-03-16
  */
-public class ObjectAnalyzerTest
-{
-   public static void main(String[] args)
-         throws ReflectiveOperationException
-   {
-      var squares = new ArrayList<Integer>();
-      for (int i = 1; i <= 5; i++)
-         squares.add(i * i);
-      System.out.println(new ObjectAnalyzer().toString(squares));
-   }
+public class ObjectAnalyzerTest {
+    public static void main(String[] args)
+            throws ReflectiveOperationException {
+        var squares = new ArrayList<Integer>();
+        for (int i = 1; i <= 5; i++)
+            squares.add(i * i);
+        System.out.println(new ObjectAnalyzer().toString(squares));
+    }
 }

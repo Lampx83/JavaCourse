@@ -1,6 +1,6 @@
 package v1ch09._7_sieve;
 
-import java.util.*;
+import java.util.BitSet;
 
 /**
  * This program runs the Sieve of Erathostenes benchmark. It computes all primes

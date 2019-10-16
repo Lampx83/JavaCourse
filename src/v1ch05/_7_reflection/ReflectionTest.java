@@ -1,10 +1,13 @@
 package v1ch05._7_reflection;
 
-import java.util.*;
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.Scanner;
 
 /**
- * This program uses _7_reflection to print all features of a class.
+ * This program uses _7_reflection to _15_print all features of a class.
  *
  * @author Cay Horstmann
  * @version 1.11 2018-03-16
@@ -21,7 +24,7 @@ public class ReflectionTest {
             name = in.next();
         }
 
-        // print class name and superclass name (if != Object)
+        // _15_print class name and superclass name (if != Object)
         Class cl = Class.forName(name);
         Class supercl = cl.getSuperclass();
         String modifiers = Modifier.toString(cl.getModifiers());
@@ -54,7 +57,7 @@ public class ReflectionTest {
             if (modifiers.length() > 0) System.out.print(modifiers + " ");
             System.out.print(name + "(");
 
-            // print parameter types
+            // _15_print parameter types
             Class[] paramTypes = c.getParameterTypes();
             for (int j = 0; j < paramTypes.length; j++) {
                 if (j > 0) System.out.print(", ");
@@ -77,12 +80,12 @@ public class ReflectionTest {
             String name = m.getName();
 
             System.out.print("   ");
-            // print modifiers, return type and method name
+            // _15_print modifiers, return type and method name
             String modifiers = Modifier.toString(m.getModifiers());
             if (modifiers.length() > 0) System.out.print(modifiers + " ");
             System.out.print(retType.getName() + " " + name + "(");
 
-            // print parameter types
+            // _15_print parameter types
             Class[] paramTypes = m.getParameterTypes();
             for (int j = 0; j < paramTypes.length; j++) {
                 if (j > 0) System.out.print(", ");

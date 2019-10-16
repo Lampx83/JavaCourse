@@ -1,68 +1,63 @@
 package v1ch11.fileChooser;
 
-import java.io.*;
-
 import javax.swing.*;
-import javax.swing.filechooser.*;
-import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.io.File;
 
 /**
  * A frame that has a _6_menu for loading an image and a display area for the
  * loaded image.
  */
-public class ImageViewerFrame extends JFrame
-{
-   private static final int DEFAULT_WIDTH = 300;
-   private static final int DEFAULT_HEIGHT = 400;
-   private JLabel label;
-   private JFileChooser chooser;
+public class ImageViewerFrame extends JFrame {
+    private static final int DEFAULT_WIDTH = 300;
+    private static final int DEFAULT_HEIGHT = 400;
+    private JLabel label;
+    private JFileChooser chooser;
 
-   public ImageViewerFrame()
-   {
-      setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    public ImageViewerFrame() {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-      // _2_set up _6_menu bar
-      var menuBar = new JMenuBar();
-      setJMenuBar(menuBar);
+        // _2_set up _6_menu bar
+        var menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
 
-      var menu = new JMenu("File");
-      menuBar.add(menu);
+        var menu = new JMenu("File");
+        menuBar.add(menu);
 
-      var openItem = new JMenuItem("Open");
-      menu.add(openItem);
-      openItem.addActionListener(event -> {
-         chooser.setCurrentDirectory(new File("."));
+        var openItem = new JMenuItem("Open");
+        menu.add(openItem);
+        openItem.addActionListener(event -> {
+            chooser.setCurrentDirectory(new File("."));
 
-         // show file chooser _9_dialog
+            // show file chooser _9_dialog
             int result = chooser.showOpenDialog(ImageViewerFrame.this);
 
             // if image file accepted, _2_set it as icon of the label
-            if (result == JFileChooser.APPROVE_OPTION)
-            {
-               String name = chooser.getSelectedFile().getPath();
-               label.setIcon(new ImageIcon(name));
-               pack();
+            if (result == JFileChooser.APPROVE_OPTION) {
+                String name = chooser.getSelectedFile().getPath();
+                label.setIcon(new ImageIcon(name));
+                pack();
             }
-         });
+        });
 
-      var exitItem = new JMenuItem("Exit");
-      menu.add(exitItem);
-      exitItem.addActionListener(event -> System.exit(0));
+        var exitItem = new JMenuItem("Exit");
+        menu.add(exitItem);
+        exitItem.addActionListener(event -> System.exit(0));
 
-      // use a label to display the images
-      label = new JLabel();
-      add(label);
+        // use a label to display the images
+        label = new JLabel();
+        add(label);
 
-      // _2_set up file chooser
-      chooser = new JFileChooser();
+        // _2_set up file chooser
+        chooser = new JFileChooser();
 
-      // accept all image files ending with .jpg, .jpeg, .gif
-      var filter = new FileNameExtensionFilter(
-            "Image files", "jpg", "jpeg", "gif");
-      chooser.setFileFilter(filter);
+        // accept all image files ending with .jpg, .jpeg, .gif
+        var filter = new FileNameExtensionFilter(
+                "Image files", "jpg", "jpeg", "gif");
+        chooser.setFileFilter(filter);
 
-      chooser.setAccessory(new ImagePreviewer(chooser));
+        chooser.setAccessory(new ImagePreviewer(chooser));
 
-      chooser.setFileView(new FileIconView(filter, new ImageIcon("palette.gif")));
-   }
+        chooser.setFileView(new FileIconView(filter, new ImageIcon("palette.gif")));
+    }
 }

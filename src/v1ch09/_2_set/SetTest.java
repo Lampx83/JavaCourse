@@ -1,35 +1,34 @@
 package v1ch09._2_set;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Scanner;
 
 /**
- * This program uses a _2_set to print all unique words in System.in.
- * @version 1.12 2015-06-21
+ * This program uses a _2_set to _15_print all unique words in System.in.
+ *
  * @author Cay Horstmann
+ * @version 1.12 2015-06-21
  */
-public class SetTest
-{
-   public static void main(String[] args)
-   {
-      var words = new HashSet<String>(); 
-      long totalTime = 0;
+public class SetTest {
+    public static void main(String[] args) {
+        var words = new HashSet<String>();
+        long totalTime = 0;
 
-      try (var in = new Scanner(System.in))
-      {
-         while (in.hasNext())
-         {
-            String word = in.next();
-            long callTime = System.currentTimeMillis();
-            words.add(word);
-            callTime = System.currentTimeMillis() - callTime;
-            totalTime += callTime;
-         }
-      }
+        try (var in = new Scanner(System.in)) {
+            while (in.hasNext()) {
+                String word = in.next();
+                long callTime = System.currentTimeMillis();
+                words.add(word);
+                callTime = System.currentTimeMillis() - callTime;
+                totalTime += callTime;
+            }
+        }
 
-      Iterator<String> iter = words.iterator();
-      for (int i = 1; i <= 20 && iter.hasNext(); i++)
-         System.out.println(iter.next());
-      System.out.println(". . .");
-      System.out.println(words.size() + " distinct words. " + totalTime + " milliseconds.");
-   }
+        Iterator<String> iter = words.iterator();
+        for (int i = 1; i <= 20 && iter.hasNext(); i++)
+            System.out.println(iter.next());
+        System.out.println(". . .");
+        System.out.println(words.size() + " distinct words. " + totalTime + " milliseconds.");
+    }
 }

@@ -37,15 +37,15 @@ public class CompoundInterest {
             }
         }
 
-        // print one row of interest rates
+        // _15_print one row of interest rates
         for (int j = 0; j < interestRate.length; j++)
             System.out.printf("%9.0f%%", 100 * interestRate[j]);
 
         System.out.println();
 
-        // print balance table
+        // _15_print balance _1_table
         for (double[] row : balances) {
-            // print table row
+            // _15_print _1_table row
             for (double b : row)
                 System.out.printf("%10.2f", b);
 

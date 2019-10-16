@@ -1,41 +1,34 @@
 package v1ch11._9_dialog;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A sample modal _9_dialog that displays a message and waits for the user to click
  * the OK _5_button.
  */
-public class AboutDialog extends JDialog
-{
-   public AboutDialog(JFrame owner)
-   {
-      super(owner, "About DialogTest", true);
+public class AboutDialog extends JDialog {
+    public AboutDialog(JFrame owner) {
+        super(owner, "About DialogTest", true);
 
-      // add HTML label to center
+        // add HTML label to center
 
-      add(
-         new JLabel(
-            "<html><h1><i>Core Java</i></h1><hr>By Cay Horstmann</html>"),
-         BorderLayout.CENTER);
+        add(
+                new JLabel(
+                        "<html><h1><i>Core Java</i></h1><hr>By Cay Horstmann</html>"),
+                BorderLayout.CENTER);
 
-      // OK _5_button closes the _9_dialog
+        // OK _5_button closes the _9_dialog
 
-      var ok = new JButton("OK");
-      ok.addActionListener(event -> setVisible(false));
+        var ok = new JButton("OK");
+        ok.addActionListener(event -> setVisible(false));
 
-      // add OK _5_button to southern border
+        // add OK _5_button to southern border
 
-      var panel = new JPanel();
-      panel.add(ok);
-      add(panel, BorderLayout.SOUTH);
+        var panel = new JPanel();
+        panel.add(ok);
+        add(panel, BorderLayout.SOUTH);
 
-      pack();
-   }
+        pack();
+    }
 }

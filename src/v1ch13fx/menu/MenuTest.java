@@ -1,13 +1,15 @@
 package v1ch13fx.menu;
 
-import javafx.application.*;
-import javafx.event.*;
-import javafx.scene.*;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.*;
-import javafx.scene.input.*;
-import javafx.scene.layout.*;
-import javafx.stage.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 /**
  * @author Cay Horstmann

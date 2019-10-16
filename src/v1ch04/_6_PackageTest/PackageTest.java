@@ -1,9 +1,10 @@
 package v1ch04._6_PackageTest;
 
 import v1ch04._6_PackageTest.com.horstmann.corejava.Employee;
-// the Employee class is defined in that package
 
-import static java.lang.System.*;
+import static java.lang.System.out;
+
+// the Employee class is defined in that package
 
 /**
  * This program demonstrates the use of packages.

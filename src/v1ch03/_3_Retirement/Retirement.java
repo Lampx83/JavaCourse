@@ -1,6 +1,6 @@
 package v1ch03._3_Retirement;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * This program demonstrates a <code>while</code> loop.
@@ -34,13 +34,13 @@ public class Retirement {
 //      // _2_read inputs
 //      Scanner in = new Scanner(System.in);
 //
-//      System.out.print("How much money do you need to retire? ");
+//      System.out._15_print("How much money do you need to _5_retire? ");
 //      double goal = in.nextDouble();
 //
-//      System.out.print("How much money will you contribute every year? ");
+//      System.out._15_print("How much money will you contribute every year? ");
 //      double payment = in.nextDouble();
 //
-//      System.out.print("Interest rate in %: ");
+//      System.out._15_print("Interest rate in %: ");
 //      double interestRate = in.nextDouble();
 //
 //      double balance = 0;
@@ -56,6 +56,6 @@ public class Retirement {
 //         years++;
 //      }
 //
-//      System.out.println("You can retire in " + years + " years.");
+//      System.out.println("You can _5_retire in " + years + " years.");
     }
 }
