@@ -7,7 +7,7 @@ import javax.swing.filechooser.*;
 import javax.swing.filechooser.FileFilter;
 
 /**
- * A frame that has a menu for loading an image and a display area for the
+ * A frame that has a _6_menu for loading an image and a display area for the
  * loaded image.
  */
 public class ImageViewerFrame extends JFrame
@@ -21,7 +21,7 @@ public class ImageViewerFrame extends JFrame
    {
       setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-      // _2_set up menu bar
+      // _2_set up _6_menu bar
       var menuBar = new JMenuBar();
       setJMenuBar(menuBar);
 
@@ -33,7 +33,7 @@ public class ImageViewerFrame extends JFrame
       openItem.addActionListener(event -> {
          chooser.setCurrentDirectory(new File("."));
 
-         // show file chooser dialog
+         // show file chooser _9_dialog
             int result = chooser.showOpenDialog(ImageViewerFrame.this);
 
             // if image file accepted, _2_set it as icon of the label

@@ -6,7 +6,7 @@ import java.awt.geom.*;
 import java.awt.print.*;
 
 /**
- * A banner that prints a text string on multiple pages.
+ * A banner that prints a _1_text string on multiple pages.
  */
 public class Banner implements Printable
 {

@@ -6,7 +6,7 @@ import java.awt.print.*;
 import javax.swing.*;
 
 /**
- * This class implements a generic print preview dialog.
+ * This class implements a generic print preview _9_dialog.
  */
 public class PrintPreviewDialog extends JDialog
 {
@@ -16,7 +16,7 @@ public class PrintPreviewDialog extends JDialog
    private PrintPreviewCanvas canvas;
 
    /**
-    * Constructs a print preview dialog.
+    * Constructs a print preview _9_dialog.
     * @param p a Printable
     * @param pf the page format
     * @param pages the number of pages in p
@@ -29,7 +29,7 @@ public class PrintPreviewDialog extends JDialog
    }
 
    /**
-    * Constructs a print preview dialog.
+    * Constructs a print preview _9_dialog.
     * @param b a Book
     */
    public PrintPreviewDialog(Book b)
@@ -38,7 +38,7 @@ public class PrintPreviewDialog extends JDialog
    }
 
    /**
-    * Lays out the UI of the dialog.
+    * Lays out the UI of the _9_dialog.
     * @param book the book to be previewed
     */
    public void layoutUI(Book book)

@@ -115,7 +115,7 @@ public class DialogDemo extends Application
       fileChooser.setOnAction(event ->
          {
             FileChooser dialog = new FileChooser();
-            dialog.setInitialDirectory(new File("menu"));
+            dialog.setInitialDirectory(new File("_6_menu"));
             dialog.setInitialFileName("untitled.gif");
             dialog.getExtensionFilters().addAll(
                new FileChooser.ExtensionFilter("GIF images", "*.gif"),

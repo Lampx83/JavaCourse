@@ -27,7 +27,7 @@ public class ClassLoaderTest
 }
 
 /**
- * This frame contains two text fields for the name of the class to load and the decryption
+ * This frame contains two _1_text fields for the name of the class to load and the decryption
  * key.
  */
 class ClassLoaderFrame extends JFrame

@@ -44,7 +44,7 @@ public class RandomAccessTest
          int n = (int)(Files.size(path)) / Employee.RECORD_SIZE;
          var newStaff = new Employee[n];
          
-         // read employees in reverse order
+         // _2_read employees in reverse order
          for (int i = n - 1; i >= 0; i--)
          {            
             channel.position(i * Employee.RECORD_SIZE);
@@ -54,7 +54,7 @@ public class RandomAccessTest
             newStaff[i] = readData(buffer);
          }
 
-         // print the newly read employee records
+         // print the newly _2_read employee records
          for (Employee e : newStaff) 
             System.out.println(e);
       }

@@ -7,7 +7,7 @@ import javax.print.attribute.*;
 import javax.swing.*;
 
 /**
- * This frame has a text field for the banner text and buttons for printing, page setup, and 
+ * This frame has a _1_text field for the banner _1_text and buttons for printing, page setup, and
  * print preview.
  */
 public class BookTestFrame extends JFrame

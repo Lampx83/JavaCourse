@@ -113,7 +113,7 @@ class ViewDBFrame extends JFrame
    }
 
    /**
-    * Prepares the text fields for showing a new table, and shows the first row.
+    * Prepares the _1_text fields for showing a new table, and shows the first row.
     * @param tableName the name of the table to display
     * @param conn the database connection
     */
@@ -287,7 +287,7 @@ class DataPanel extends JPanel
    }
 
    /**
-    * Shows a database row by populating all text fields with the column values.
+    * Shows a database row by populating all _1_text fields with the column values.
     */
    public void showRow(ResultSet rs)
    {

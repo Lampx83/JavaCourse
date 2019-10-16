@@ -31,7 +31,7 @@ public class Retirement {
         System.out.print("Bạn có thể nghỉ hưu sau " + nam + " năm");
 
 
-//      // read inputs
+//      // _2_read inputs
 //      Scanner in = new Scanner(System.in);
 //
 //      System.out.print("How much money do you need to retire? ");

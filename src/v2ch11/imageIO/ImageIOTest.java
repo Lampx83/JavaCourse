@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program lets you read and write image files in the formats that the JDK supports. 
+ * This program lets you _2_read and _6_write image files in the formats that the JDK supports.
  * Multi-file images are supported.
  * @version 1.05 2018-05-01
  * @author Cay Horstmann

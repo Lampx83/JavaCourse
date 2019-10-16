@@ -67,7 +67,7 @@ public class TaskDemo extends Application
                      Platform.runLater(() -> 
                         content.appendText(line + "\n"));
                      lines++;
-                     updateMessage(lines + " lines read");
+                     updateMessage(lines + " lines _2_read");
                   }
                }
                catch (InterruptedException e)

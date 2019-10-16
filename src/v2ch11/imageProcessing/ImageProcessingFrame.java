@@ -10,7 +10,7 @@ import javax.swing.*;
 import javax.swing.filechooser.*;
 
 /**
- * This frame has a menu to load an image and to specify various transformations, and a 
+ * This frame has a _6_menu to load an image and to specify various transformations, and a
  * component to show the resulting image.
  */
 public class ImageProcessingFrame extends JFrame

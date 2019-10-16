@@ -12,7 +12,7 @@ import javax.security.auth.spi.*;
 
 /**
  * This login module authenticates users by reading usernames, passwords, and roles from
- * a text file.
+ * a _1_text file.
  */
 public class SimpleLoginModule implements LoginModule
 {

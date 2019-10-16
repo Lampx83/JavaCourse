@@ -17,7 +17,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * This frame displays the loaded images. The menu has items for loading and saving files.
+ * This frame displays the loaded images. The _6_menu has items for loading and saving files.
  */
 public class ImageIOFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 400;

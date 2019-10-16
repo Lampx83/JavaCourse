@@ -28,7 +28,7 @@ public class PermissionTest
 }
 
 /**
- * This frame contains a text field for inserting words into a text area that is protected
+ * This frame contains a _1_text field for inserting words into a _1_text area that is protected
  * from "bad words".
  */
 class PermissionTestFrame extends JFrame
@@ -57,7 +57,7 @@ class PermissionTestFrame extends JFrame
    }
 
    /**
-    * Tries to insert words into the text area. Displays a dialog if the attempt fails.
+    * Tries to insert words into the _1_text area. Displays a _9_dialog if the attempt fails.
     * @param words the words to insert
     */
    public void insertWords(String words)
@@ -75,7 +75,7 @@ class PermissionTestFrame extends JFrame
 }
 
 /**
- * A text area whose append method makes a security check to see that no bad words are added.
+ * A _1_text area whose append method makes a security check to see that no bad words are added.
  */
 class WordCheckTextArea extends JTextArea
 {

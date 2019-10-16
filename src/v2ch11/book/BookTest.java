@@ -5,8 +5,8 @@ import javax.swing.*;
 
 /**
  * This program demonstrates the printing of a multi-page book. It prints a "banner", by 
- * blowing up a text string to fill the entire page vertically. The program also contains 
- * a generic print preview dialog.
+ * blowing up a _1_text string to fill the entire page vertically. The program also contains
+ * a generic print preview _9_dialog.
  * @version 1.14 2018-05-10
  * @author Cay Horstmann
  */

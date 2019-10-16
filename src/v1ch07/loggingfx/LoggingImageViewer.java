@@ -1,17 +1,23 @@
 package v1ch07.loggingfx;
 
-import java.io.*;
-import java.nio.file.*;
-import java.util.logging.*;
-
-import javafx.application.*;
-import javafx.scene.*;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Alert.*;
-import javafx.scene.image.*;
-import javafx.scene.layout.*;
-import javafx.stage.*;
-import javafx.stage.FileChooser.*;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.logging.*;
 
 /**
  * A modification of the image viewer program that logs various events.
@@ -25,8 +31,8 @@ public class LoggingImageViewer extends Application
 
    public void start(Stage stage) throws IOException
    {
-      if (System.getProperty("java.util.logging.config.class") == null
-            && System.getProperty("java.util.logging.config.file") == null)
+      if (System.getProperty("java.util._2_logging.config.class") == null
+            && System.getProperty("java.util._2_logging.config.file") == null)
       {
          try
          {

@@ -25,7 +25,7 @@ public class FontTest
 }
 
 /**
- * A frame with a text message component.
+ * A frame with a _1_text message component.
  */
 class FontFrame extends JFrame
 {
@@ -58,7 +58,7 @@ class FontComponent extends JComponent
       FontRenderContext context = g2.getFontRenderContext();
       Rectangle2D bounds = f.getStringBounds(message, context);
 
-      // _2_set (x,y) = top left corner of text
+      // _2_set (x,y) = top left corner of _1_text
 
       double x = (getWidth() - bounds.getWidth()) / 2;
       double y = (getHeight() - bounds.getHeight()) / 2;

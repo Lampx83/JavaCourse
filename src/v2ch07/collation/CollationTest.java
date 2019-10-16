@@ -29,7 +29,7 @@ public class CollationTest
 
 /**
  * This frame contains combo boxes to pick a locale, collation strength and decomposition 
- * rules, a text field and _5_button to add new strings, and a text area to list the collated
+ * rules, a _1_text field and _5_button to add new strings, and a _1_text area to list the collated
  * strings.
  */
 class CollationFrame extends JFrame

@@ -28,8 +28,8 @@ public class DateTimeFormatterTest
 }
 
 /**
- * This frame contains combo boxes to pick a locale, date and time formats, text fields to 
- * display formatted date and time, buttons to parse the text field contents, and a "lenient" 
+ * This frame contains combo boxes to pick a locale, date and time formats, _1_text fields to
+ * display formatted date and time, buttons to parse the _1_text field contents, and a "lenient"
  * check box.
  */
 class DateTimeFormatterFrame extends JFrame

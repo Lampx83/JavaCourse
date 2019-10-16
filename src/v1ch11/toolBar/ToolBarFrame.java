@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- * A frame with a toolbar and menu for color changes.
+ * A frame with a toolbar and _6_menu for color changes.
  */
 public class ToolBarFrame extends JFrame
 {
@@ -48,7 +48,7 @@ public class ToolBarFrame extends JFrame
       bar.add(exitAction);
       add(bar, BorderLayout.NORTH);
 
-      // populate menu
+      // populate _6_menu
 
       var menu = new JMenu("Color");
       menu.add(yellowAction);

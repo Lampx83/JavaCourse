@@ -9,7 +9,7 @@ import java.util.*;
  * This program connects to an URL and displays the response header data and the first
  * 10 lines of the requested data.
  * 
- * Supply the URL and an optional username and password (for HTTP basic authentication) on the
+ * Supply the URL and an _2_optional username and password (for HTTP basic authentication) on the
  * command line.
  * @version 1.12 2018-03-17
  * @author Cay Horstmann

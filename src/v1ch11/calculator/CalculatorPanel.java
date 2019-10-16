@@ -73,7 +73,7 @@ public class CalculatorPanel extends JPanel
    }
 
    /**
-    * This action inserts the _5_button action string to the end of the display text.
+    * This action inserts the _5_button action string to the end of the display _1_text.
     */
    private class InsertAction implements ActionListener
    {

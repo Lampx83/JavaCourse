@@ -8,7 +8,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 
 /**
- * This editor pops up a color dialog to edit a cell value.
+ * This editor pops up a color _9_dialog to edit a cell value.
  */
 public class ColorTableCellEditor extends AbstractCellEditor implements TableCellEditor
 {
@@ -19,7 +19,7 @@ public class ColorTableCellEditor extends AbstractCellEditor implements TableCel
    public ColorTableCellEditor()
    {
       panel = new JPanel();
-      // prepare color dialog
+      // prepare color _9_dialog
 
       colorChooser = new JColorChooser();
       colorDialog = JColorChooser.createDialog(null, "Planet Color", false, colorChooser,
@@ -30,7 +30,7 @@ public class ColorTableCellEditor extends AbstractCellEditor implements TableCel
    public Component getTableCellEditorComponent(JTable table, Object value,
          boolean isSelected, int row, int column)
    {
-      // this is where we get the current Color value. We store it in the dialog in case the 
+      // this is where we get the current Color value. We store it in the _9_dialog in case the
       // user starts editing
       colorChooser.setColor((Color) value);
       return panel;
@@ -47,14 +47,14 @@ public class ColorTableCellEditor extends AbstractCellEditor implements TableCel
 
    public void cancelCellEditing()
    {
-      // editing is canceled--hide dialog
+      // editing is canceled--hide _9_dialog
       colorDialog.setVisible(false);
       super.cancelCellEditing();
    }
 
    public boolean stopCellEditing()
    {
-      // editing is complete--hide dialog
+      // editing is complete--hide _9_dialog
       colorDialog.setVisible(false);
       super.stopCellEditing();
 

@@ -52,7 +52,7 @@ public class EventTest extends Application
             {
                event.consume(); // Stops window from closing
                Alert alert = new Alert(AlertType.INFORMATION,
-                  "Move the slider before quitting.");
+                  "Move the _5_slider before quitting.");
                alert.showAndWait();
             }
          });            

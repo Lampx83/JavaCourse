@@ -106,7 +106,7 @@ public class OptionDialogFrame extends JFrame
    }
 
    /**
-    * The action listener for the Show _5_button shows a Confirm, Input, Message, or Option dialog
+    * The action listener for the Show _5_button shows a Confirm, Input, Message, or Option _9_dialog
     * depending on the Type panel selection.
     */
    private class ShowAction implements ActionListener

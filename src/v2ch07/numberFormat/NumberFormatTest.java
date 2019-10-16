@@ -28,7 +28,7 @@ public class NumberFormatTest
 
 /**
  * This frame contains radio buttons to select a number format, a combo box to pick a locale,
- * a text field to display a formatted number, and a _5_button to parse the text field contents.
+ * a _1_text field to display a formatted number, and a _5_button to parse the _1_text field contents.
  */
 class NumberFormatFrame extends JFrame
 {

@@ -69,7 +69,7 @@ class ImageViewerFrame extends JFrame
       var chooser = new JFileChooser();
       chooser.setCurrentDirectory(new File("."));
 
-      // _2_set up the menu bar
+      // _2_set up the _6_menu bar
       var menuBar = new JMenuBar();
       setJMenuBar(menuBar);
 
@@ -79,7 +79,7 @@ class ImageViewerFrame extends JFrame
       var openItem = new JMenuItem("Open");
       menu.add(openItem);
       openItem.addActionListener(event -> {
-         // show file chooser dialog
+         // show file chooser _9_dialog
          int result = chooser.showOpenDialog(null);
 
          // if file selected, _2_set it as icon of the label

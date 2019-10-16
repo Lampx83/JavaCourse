@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.tree.*;
 
 /**
- * This frame displays the class tree, a text field, and an "Add" _5_button to add more classes
+ * This frame displays the class tree, a _1_text field, and an "Add" _5_button to add more classes
  * into the tree.
  */
 public class ClassTreeFrame extends JFrame
@@ -56,10 +56,10 @@ public class ClassTreeFrame extends JFrame
       int mode = TreeSelectionModel.SINGLE_TREE_SELECTION;
       tree.getSelectionModel().setSelectionMode(mode);
 
-      // this text area holds the class description
+      // this _1_text area holds the class description
       textArea = new JTextArea();
 
-      // add tree and text area
+      // add tree and _1_text area
       var panel = new JPanel();
       panel.setLayout(new GridLayout(1, 2));
       panel.add(new JScrollPane(tree));
@@ -71,7 +71,7 @@ public class ClassTreeFrame extends JFrame
    }
 
    /**
-    * Add the text field and "Add" _5_button to add a new class.
+    * Add the _1_text field and "Add" _5_button to add a new class.
     */
    public void addTextField()
    {
@@ -79,11 +79,11 @@ public class ClassTreeFrame extends JFrame
 
       ActionListener addListener = event ->
          {
-            // add the class whose name is in the text field
+            // add the class whose name is in the _1_text field
             try
             {
                String text = textField.getText();
-               addClass(Class.forName(text)); // clear text field to indicate success
+               addClass(Class.forName(text)); // clear _1_text field to indicate success
                textField.setText("");
             }
             catch (ClassNotFoundException e)
@@ -92,7 +92,7 @@ public class ClassTreeFrame extends JFrame
             }
          };
 
-      // new class names are typed into this text field
+      // new class names are typed into this _1_text field
       textField = new JTextField(20);
       textField.addActionListener(addListener);
       panel.add(textField);

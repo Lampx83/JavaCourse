@@ -158,7 +158,7 @@ class RetireFrame extends JFrame
    }
 
    /**
-    * Updates the information in the text fields.
+    * Updates the information in the _1_text fields.
     */
    public void updateInfo()
    {
@@ -173,7 +173,7 @@ class RetireFrame extends JFrame
    }
 
    /**
-    * Updates the data displayed in the text area.
+    * Updates the data displayed in the _1_text area.
     */
    public void updateData()
    {
@@ -202,7 +202,7 @@ class RetireFrame extends JFrame
    }
 
    /**
-    * Reads the user input from the text fields.
+    * Reads the user input from the _1_text fields.
     */
    public void getInfo()
    {

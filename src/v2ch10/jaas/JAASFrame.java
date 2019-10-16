@@ -7,7 +7,7 @@ import javax.security.auth.login.*;
 import javax.swing.*;
 
 /**
- * This frame has text fields for user name and password, a field for the name of the requested
+ * This frame has _1_text fields for user name and password, a field for the name of the requested
  * system property, and a field to show the property value.
  */
 public class JAASFrame extends JFrame

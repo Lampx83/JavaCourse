@@ -17,10 +17,10 @@ public class MenuTest extends Application {
     private TextArea textArea = new TextArea();
 
     /**
-     * Makes this item or, if a menu, its descendant items, carry out the
+     * Makes this item or, if a _6_menu, its descendant items, carry out the
      * given action if there isn't already an action defined.
      *
-     * @param item   the menu item (which may be a menu)
+     * @param item   the _6_menu item (which may be a _6_menu)
      * @param action the default action
      */
     private void defaultAction(MenuItem item, EventHandler<ActionEvent> action) {
@@ -80,25 +80,25 @@ public class MenuTest extends Application {
         // demonstrate icons
 
         MenuItem cutItem = new MenuItem("Cut",
-                new ImageView("menu/cut.gif"));
+                new ImageView("_6_menu/cut.gif"));
         MenuItem copyItem = new MenuItem("Copy",
-                new ImageView("menu/copy.gif"));
+                new ImageView("_6_menu/copy.gif"));
         MenuItem pasteItem = new MenuItem("Paste",
-                new ImageView("menu/paste.gif"));
+                new ImageView("_6_menu/paste.gif"));
 
-        // demonstrate context menu
+        // demonstrate context _6_menu
 
         ContextMenu contextMenu = new ContextMenu(cutItem, copyItem, pasteItem);
         textArea.setContextMenu(contextMenu);
 
         editMenu.getItems().addAll(cutItem, copyItem, pasteItem);
-        // Bug or restriction--must add to context menu first
+        // Bug or restriction--must add to context _6_menu first
         // http://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8194270
 
         // demonstrate nested menus
 
         Menu optionsMenu = new Menu("Options",
-                new ImageView("menu/options.gif"), readOnlyItem,
+                new ImageView("_6_menu/options.gif"), readOnlyItem,
                 insertItem, overtypeItem);
 
         editMenu.getItems().add(optionsMenu);
@@ -110,7 +110,7 @@ public class MenuTest extends Application {
         Menu helpMenu = new Menu("_Help", null,
                 aboutProgramItem, aboutCoreJavaItem);
 
-        // add menu bar
+        // add _6_menu bar
 
         MenuBar bar = new MenuBar(fileMenu, editMenu, helpMenu);
         VBox root = new VBox(bar, textArea);

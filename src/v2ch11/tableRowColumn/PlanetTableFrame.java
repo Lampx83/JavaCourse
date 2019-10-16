@@ -82,7 +82,7 @@ public class PlanetTableFrame extends JFrame
             } 
          };
       
-      // create menu
+      // create _6_menu
 
       var menuBar = new JMenuBar();
       setJMenuBar(menuBar);

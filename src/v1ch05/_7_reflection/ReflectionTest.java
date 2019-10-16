@@ -12,7 +12,7 @@ import java.lang.reflect.*;
 public class ReflectionTest {
     public static void main(String[] args)
             throws ReflectiveOperationException {
-        // read class name from command line args or user input
+        // _2_read class name from command line args or user input
         String name;
         if (args.length > 0) name = args[0];
         else {
