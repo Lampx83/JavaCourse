@@ -18,7 +18,7 @@ public class ImageViewer {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             var frame = new ImageViewerFrame();
-            frame.setTitle("ImageViewer");
+            frame.setTitle("_2_ImageViewer");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
@@ -36,7 +36,7 @@ class ImageViewerFrame extends JFrame {
 
     public ImageViewerFrame() {
         Preferences root = Preferences.userRoot();
-        Preferences node = root.node("/com/horstmann/corejava/ImageViewer");
+        Preferences node = root.node("/com/horstmann/corejava/_2_ImageViewer");
         // get position, size, title from properties
         int left = node.getInt("left", 0);
         int top = node.getInt("top", 0);

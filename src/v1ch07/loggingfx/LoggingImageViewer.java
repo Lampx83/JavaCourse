@@ -55,7 +55,7 @@ public class LoggingImageViewer extends Application {
         exitItem.setOnAction(event -> Platform.exit());
         fileMenu.getItems().addAll(openItem, exitItem);
         stage.setScene(new Scene(pane, MIN_SIZE, MIN_SIZE));
-        stage.setTitle("ImageViewer");
+        stage.setTitle("_2_ImageViewer");
 
         logger.addHandler(new WindowHandler(stage, Level.ALL));
         logger.fine("Showing stage");

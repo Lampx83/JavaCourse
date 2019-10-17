@@ -21,7 +21,7 @@ public class ImageViewer {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             var frame = new ImageViewerFrame();
-            frame.setTitle("ImageViewer");
+            frame.setTitle("_2_ImageViewer");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
@@ -47,7 +47,7 @@ class ImageViewerFrame extends JFrame {
         String userDir = System.getProperty("user.home");
         var propertiesDir = new File(userDir, ".corejava");
         if (!propertiesDir.exists()) propertiesDir.mkdir();
-        propertiesFile = new File(propertiesDir, "ImageViewer.properties");
+        propertiesFile = new File(propertiesDir, "_2_ImageViewer.properties");
 
         var defaultSettings = new Properties();
         defaultSettings.setProperty("left", "0");
