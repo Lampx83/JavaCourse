@@ -8,9 +8,9 @@ import java.security.*;
 
 /**
  * This program tests the RSA cipher. Usage:<br>
- * java _8_rsa.RSATest -genkey public private<br>
- * java _8_rsa.RSATest -encrypt plaintext encrypted public<br>
- * java _8_rsa.RSATest -decrypt encrypted decrypted private<br>
+ * java rsa.RSATest -genkey public private<br>
+ * java rsa.RSATest -encrypt plaintext encrypted public<br>
+ * java rsa.RSATest -decrypt encrypted decrypted private<br>
  *
  * @author Cay Horstmann
  * @version 1.02 2018-05-01

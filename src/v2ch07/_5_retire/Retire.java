@@ -127,8 +127,8 @@ class RetireFrame extends JFrame {
         localeCombo.setLocale(currentLocale);
         localeCombo.setSelectedItem(currentLocale);
 
-        res = ResourceBundle.getBundle("_5_retire.RetireResources", currentLocale);
-        resStrings = ResourceBundle.getBundle("_5_retire.RetireStrings", currentLocale);
+        res = ResourceBundle.getBundle("retire.RetireResources", currentLocale);
+        resStrings = ResourceBundle.getBundle("retire.RetireStrings", currentLocale);
         currencyFmt = NumberFormat.getCurrencyInstance(currentLocale);
         numberFmt = NumberFormat.getNumberInstance(currentLocale);
         percentFmt = NumberFormat.getPercentInstance(currentLocale);
@@ -156,7 +156,7 @@ class RetireFrame extends JFrame {
     }
 
     /**
-     * Updates the information in the _1_text fields.
+     * Updates the information in the text fields.
      */
     public void updateInfo() {
         savingsField.setText(currencyFmt.format(info.getSavings()));
@@ -170,7 +170,7 @@ class RetireFrame extends JFrame {
     }
 
     /**
-     * Updates the data displayed in the _1_text area.
+     * Updates the data displayed in the text area.
      */
     public void updateData() {
         retireText.setText("");
@@ -196,7 +196,7 @@ class RetireFrame extends JFrame {
     }
 
     /**
-     * Reads the user input from the _1_text fields.
+     * Reads the user input from the text fields.
      */
     public void getInfo() {
         try {

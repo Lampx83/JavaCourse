@@ -2,7 +2,7 @@
         <!-- ISO Math, Greek and Symbolic Character Entity Set for XHTML .......... -->
         <!-- file: xhtml-lat1.ent
 
-             Typical _7_invocation:
+             Typical invocation:
 
                <!ENTITY % xhtml-symbol
                    PUBLIC "-//W3C//ENTITIES Symbols for XHTML//EN"
@@ -22,12 +22,12 @@
              this notice is included in all copies.
         -->
 
-        <!-- Relevant ISO entity _2_set is given unless names are newly introduced.
+        <!-- Relevant ISO entity set is given unless names are newly introduced.
              New names (i.e., not in ISO 8879 list) do not clash with any
              existing ISO 8879 entity names. ISO 10646 character numbers
              are given for each character, in hex. CDATA values are decimal
              conversions of the ISO 10646 values and refer to the document
-             character _2_set. Names are Unicode 2.0 names.
+             character set. Names are Unicode 2.0 names.
         -->
 
         <!-- Latin Extended-B -->
@@ -45,7 +45,7 @@
         <!ENTITY Theta    "&#920;" ><!-- greek capital letter theta, U+0398 ISOgrk3 -->
         <!ENTITY Iota     "&#921;" ><!-- greek capital letter iota, U+0399 -->
         <!ENTITY Kappa    "&#922;" ><!-- greek capital letter kappa, U+039A -->
-        <!ENTITY Lambda   "&#923;" ><!-- greek capital letter _4_lambda, U+039B ISOgrk3 -->
+        <!ENTITY Lambda   "&#923;" ><!-- greek capital letter lambda, U+039B ISOgrk3 -->
         <!ENTITY Mu       "&#924;" ><!-- greek capital letter mu, U+039C -->
         <!ENTITY Nu       "&#925;" ><!-- greek capital letter nu, U+039D -->
         <!ENTITY Xi       "&#926;" ><!-- greek capital letter xi, U+039E ISOgrk3 -->
@@ -71,7 +71,7 @@
         <!ENTITY theta    "&#952;" ><!-- greek small letter theta, U+03B8 ISOgrk3 -->
         <!ENTITY iota     "&#953;" ><!-- greek small letter iota, U+03B9 ISOgrk3 -->
         <!ENTITY kappa    "&#954;" ><!-- greek small letter kappa, U+03BA ISOgrk3 -->
-        <!ENTITY lambda   "&#955;" ><!-- greek small letter _4_lambda, U+03BB ISOgrk3 -->
+        <!ENTITY lambda   "&#955;" ><!-- greek small letter lambda, U+03BB ISOgrk3 -->
         <!ENTITY mu       "&#956;" ><!-- greek small letter mu, U+03BC ISOgrk3 -->
         <!ENTITY nu       "&#957;" ><!-- greek small letter nu, U+03BD ISOgrk3 -->
         <!ENTITY xi       "&#958;" ><!-- greek small letter xi, U+03BE ISOgrk3 -->
@@ -108,7 +108,7 @@
         <!ENTITY frasl    "&#8260;" ><!-- fraction slash, U+2044 NEW -->
 
         <!-- Letterlike Symbols -->
-        <!ENTITY weierp   "&#8472;" ><!-- script capital P = power _2_set
+        <!ENTITY weierp   "&#8472;" ><!-- script capital P = power set
                                = Weierstrass p, U+2118 ISOamso -->
         <!ENTITY image    "&#8465;" ><!-- blackletter capital I = imaginary part,
                                U+2111 ISOamso -->
@@ -146,7 +146,7 @@
         <!ENTITY forall   "&#8704;" ><!-- for all, U+2200 ISOtech -->
         <!ENTITY part     "&#8706;" ><!-- partial differential, U+2202 ISOtech  -->
         <!ENTITY exist    "&#8707;" ><!-- there exists, U+2203 ISOtech -->
-        <!ENTITY empty    "&#8709;" ><!-- empty _2_set = null _2_set = diameter,
+        <!ENTITY empty    "&#8709;" ><!-- empty set = null set = diameter,
                                U+2205 ISOamso -->
         <!ENTITY nabla    "&#8711;" ><!-- nabla = backward difference,
                                U+2207 ISOtech -->
@@ -189,7 +189,7 @@
         <!ENTITY sub      "&#8834;" ><!-- subset of, U+2282 ISOtech -->
         <!ENTITY sup      "&#8835;" ><!-- superset of, U+2283 ISOtech -->
         <!-- note that nsup, 'not a superset of, U+2283' is not covered by the Symbol
-             _4_font encoding and is not included. Should it be, for symmetry?
+             font encoding and is not included. Should it be, for symmetry?
              It is in ISOamsn  -->
         <!ENTITY nsub     "&#8836;" ><!-- not a subset of, U+2284 ISOamsn -->
         <!ENTITY sube     "&#8838;" ><!-- subset of or equal to, U+2286 ISOtech -->

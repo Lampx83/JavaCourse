@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * A frame with sample _1_text components.
+ * A frame with sample text components.
  */
 public class TextComponentFrame extends JFrame {
     public static final int TEXTAREA_ROWS = 8;
@@ -28,7 +28,7 @@ public class TextComponentFrame extends JFrame {
 
         add(scrollPane, BorderLayout.CENTER);
 
-        // add _5_button to append _1_text into the _1_text area
+        // add button to append text into the text area
 
         var southPanel = new JPanel();
 

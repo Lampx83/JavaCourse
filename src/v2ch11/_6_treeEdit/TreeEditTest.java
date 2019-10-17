@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates _5_tree editing.
+ * This program demonstrates tree editing.
  *
  * @author Cay Horstmann
  * @version 1.05 2018-05-01

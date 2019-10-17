@@ -12,7 +12,7 @@ public class EmployeeTest {
         // raise everyone's salary by 5%
         for (Employee e : staff)
             e.raiseSalary(5);
-        // _15_print out information about all Employee objects
+        // print out information about all Employee objects
         for (Employee e : staff)
             System.out.println("name=" + e.name + ",salary=" + e.salary + ",hireDay=" + e.hireDay);
 

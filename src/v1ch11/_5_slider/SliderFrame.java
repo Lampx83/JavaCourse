@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.Hashtable;
 
 /**
- * A frame with many sliders and a _1_text field to show _5_slider values.
+ * A frame with many sliders and a text field to show slider values.
  */
 public class SliderFrame extends JFrame {
     private JPanel sliderPanel;
@@ -19,17 +19,17 @@ public class SliderFrame extends JFrame {
 
         // common listener for all sliders
         listener = event -> {
-            // update _1_text field when the _5_slider value changes
+            // update text field when the slider value changes
             JSlider source = (JSlider) event.getSource();
             textField.setText("" + source.getValue());
         };
 
-        // add a plain _5_slider
+        // add a plain slider
 
         var slider = new JSlider();
         addSlider(slider, "Plain");
 
-        // add a _5_slider with major and minor ticks
+        // add a slider with major and minor ticks
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -37,7 +37,7 @@ public class SliderFrame extends JFrame {
         slider.setMinorTickSpacing(5);
         addSlider(slider, "Ticks");
 
-        // add a _5_slider that snaps to ticks
+        // add a slider that snaps to ticks
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -46,7 +46,7 @@ public class SliderFrame extends JFrame {
         slider.setMinorTickSpacing(5);
         addSlider(slider, "Snap to ticks");
 
-        // add a _5_slider with no track
+        // add a slider with no track
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -55,7 +55,7 @@ public class SliderFrame extends JFrame {
         slider.setPaintTrack(false);
         addSlider(slider, "No track");
 
-        // add an inverted _5_slider
+        // add an inverted slider
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -64,7 +64,7 @@ public class SliderFrame extends JFrame {
         slider.setInverted(true);
         addSlider(slider, "Inverted");
 
-        // add a _5_slider with numeric labels
+        // add a slider with numeric labels
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -73,7 +73,7 @@ public class SliderFrame extends JFrame {
         slider.setMinorTickSpacing(5);
         addSlider(slider, "Labels");
 
-        // add a _5_slider with alphabetic labels
+        // add a slider with alphabetic labels
 
         slider = new JSlider();
         slider.setPaintLabels(true);
@@ -92,7 +92,7 @@ public class SliderFrame extends JFrame {
         slider.setLabelTable(labelTable);
         addSlider(slider, "Custom labels");
 
-        // add a _5_slider with icon labels
+        // add a slider with icon labels
 
         slider = new JSlider();
         slider.setPaintTicks(true);
@@ -115,7 +115,7 @@ public class SliderFrame extends JFrame {
         slider.setLabelTable(labelTable);
         addSlider(slider, "Icon labels");
 
-        // add the _1_text field that displays the _5_slider value
+        // add the text field that displays the slider value
 
         textField = new JTextField();
         add(sliderPanel, BorderLayout.CENTER);
@@ -124,10 +124,10 @@ public class SliderFrame extends JFrame {
     }
 
     /**
-     * Adds a _5_slider to the _5_slider panel and hooks up the listener
+     * Adds a slider to the slider panel and hooks up the listener
      *
-     * @param slider      the _5_slider
-     * @param description the _5_slider description
+     * @param slider      the slider
+     * @param description the slider description
      */
     public void addSlider(JSlider slider, String description) {
         slider.addChangeListener(listener);

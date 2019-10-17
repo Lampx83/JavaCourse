@@ -17,19 +17,19 @@ public class Manager extends Employee {
         this.bonus = bonus;
     }
 
-    public boolean equals(Object otherObject) {
-        if (!super.equals(otherObject)) return false;
-        var other = (Manager) otherObject;
-        // super._3_equals checked that this and other belong to the same class
-        return bonus == other.bonus;
-    }
-
-    public int hashCode() {
-        return java.util.Objects.hash(super.hashCode(), bonus);
-    }
-
-    public String toString() {
-        return super.toString() + "[bonus=" + bonus + "]";
-    }
+//    public boolean equals(Object otherObject) {
+//        if (!super.equals(otherObject)) return false;
+//        var other = (Manager) otherObject;
+//        // super.equals checked that this and other belong to the same class
+//        return bonus == other.bonus;
+//    }
+//
+//    public int hashCode() {
+//        return java.util.Objects.hash(super.hashCode(), bonus);
+//    }
+//
+//    public String toString() {
+//        return super.toString() + "[bonus=" + bonus + "]";
+//    }
 }
 

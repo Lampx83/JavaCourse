@@ -19,10 +19,10 @@ import java.nio.file.Paths;
 import java.util.StringTokenizer;
 
 /**
- * This program demonstrates XSL transformations. It applies a transformation to a _2_set of
- * _4_employee records. The records are stored in the file _4_employee.dat and turned into XML
+ * This program demonstrates XSL transformations. It applies a transformation to a set of
+ * employee records. The records are stored in the file employee.dat and turned into XML
  * format. Specify the stylesheet on the command line, e.g.<br>
- * java _7_transform.TransformTest _7_transform/makeprop.xsl
+ * java transform.TransformTest transform/makeprop.xsl
  *
  * @author Cay Horstmann
  * @version 1.04 2018-04-10
@@ -31,7 +31,7 @@ public class TransformTest {
     public static void main(String[] args) throws Exception {
         Path path;
         if (args.length > 0) path = Paths.get(args[0]);
-        else path = Paths.get("_7_transform", "makehtml.xsl");
+        else path = Paths.get("transform", "makehtml.xsl");
         try (InputStream styleIn = Files.newInputStream(path)) {
             var styleSource = new StreamSource(styleIn);
 
@@ -40,7 +40,7 @@ public class TransformTest {
             t.setOutputProperty(OutputKeys.METHOD, "xml");
             t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
-            try (InputStream docIn = Files.newInputStream(Paths.get("_7_transform", "_4_employee.dat"))) {
+            try (InputStream docIn = Files.newInputStream(Paths.get("transform", "employee.dat"))) {
                 t.transform(new SAXSource(new EmployeeReader(), new InputSource(docIn)),
                         new StreamResult(System.out));
             }
@@ -49,7 +49,7 @@ public class TransformTest {
 }
 
 /**
- * This class reads the flat file _4_employee.dat and reports SAX parser events to act as if it
+ * This class reads the flat file employee.dat and reports SAX parser events to act as if it
  * was parsing an XML file.
  */
 class EmployeeReader implements XMLReader {
@@ -67,7 +67,7 @@ class EmployeeReader implements XMLReader {
         handler.startElement("", rootElement, rootElement, atts);
         String line;
         while ((line = in.readLine()) != null) {
-            handler.startElement("", "_4_employee", "_4_employee", atts);
+            handler.startElement("", "employee", "employee", atts);
             var t = new StringTokenizer(line, "|");
 
             handler.startElement("", "name", "name", atts);
@@ -87,7 +87,7 @@ class EmployeeReader implements XMLReader {
             handler.endElement("", "hiredate", "hiredate");
             atts.clear();
 
-            handler.endElement("", "_4_employee", "_4_employee");
+            handler.endElement("", "employee", "employee");
         }
 
         handler.endElement("", rootElement, rootElement);

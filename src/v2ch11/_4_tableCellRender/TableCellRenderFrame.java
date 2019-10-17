@@ -6,7 +6,7 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 
 /**
- * This frame contains a _1_table of planet data.
+ * This frame contains a table of planet data.
  */
 public class TableCellRenderFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 600;
@@ -19,7 +19,7 @@ public class TableCellRenderFrame extends JFrame {
         var table = new JTable(model);
         table.setRowSelectionAllowed(false);
 
-        // _2_set up renderers and editors
+        // set up renderers and editors
 
         table.setDefaultRenderer(Color.class, new ColorTableCellRenderer());
         table.setDefaultEditor(Color.class, new ColorTableCellEditor());
@@ -34,7 +34,7 @@ public class TableCellRenderFrame extends JFrame {
         moonColumn.setHeaderRenderer(table.getDefaultRenderer(ImageIcon.class));
         moonColumn.setHeaderValue(new ImageIcon(getClass().getResource("Moons.gif")));
 
-        // show _1_table
+        // show table
 
         table.setRowHeight(100);
         add(new JScrollPane(table), BorderLayout.CENTER);

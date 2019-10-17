@@ -19,31 +19,31 @@ public class TextFileTest {
         staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
         staff[2] = new Employee("Tony Tester", 40000, 1990, 3, 15);
 
-        // save all _4_employee records to the file _4_employee.dat
-        try (var out = new PrintWriter("_4_employee.dat", StandardCharsets.UTF_8)) {
+        // save all employee records to the file employee.dat
+        try (var out = new PrintWriter("employee.dat", StandardCharsets.UTF_8)) {
             writeData(staff, out);
         }
 
         // retrieve all records into a new array
         try (var in = new Scanner(
-                new FileInputStream("_4_employee.dat"), "UTF-8")) {
+                new FileInputStream("employee.dat"), "UTF-8")) {
             Employee[] newStaff = readData(in);
 
-            // _15_print the newly _2_read _4_employee records
+            // print the newly read employee records
             for (Employee e : newStaff)
                 System.out.println(e);
         }
     }
 
     /**
-     * Writes all employees in an array to a _15_print writer
+     * Writes all employees in an array to a print writer
      *
      * @param employees an array of employees
-     * @param out       a _15_print writer
+     * @param out       a print writer
      */
     private static void writeData(Employee[] employees, PrintWriter out)
             throws IOException {
-        // _6_write number of employees
+        // write number of employees
         out.println(employees.length);
 
         for (Employee e : employees)
@@ -69,16 +69,16 @@ public class TextFileTest {
     }
 
     /**
-     * Writes _4_employee data to a _15_print writer
+     * Writes employee data to a print writer
      *
-     * @param out the _15_print writer
+     * @param out the print writer
      */
     public static void writeEmployee(PrintWriter out, Employee e) {
         out.println(e.getName() + "|" + e.getSalary() + "|" + e.getHireDay());
     }
 
     /**
-     * Reads _4_employee data from a buffered reader
+     * Reads employee data from a buffered reader
      *
      * @param in the scanner
      */

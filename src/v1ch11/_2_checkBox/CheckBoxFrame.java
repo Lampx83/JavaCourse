@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 /**
- * A frame with a sample _1_text label and check boxes for selecting _4_font
+ * A frame with a sample text label and check boxes for selecting font
  * attributes.
  */
 public class CheckBoxFrame extends JFrame {
@@ -15,13 +15,13 @@ public class CheckBoxFrame extends JFrame {
     private static final int FONTSIZE = 24;
 
     public CheckBoxFrame() {
-        // add the sample _1_text label
+        // add the sample text label
 
         label = new JLabel("The quick brown fox jumps over the lazy dog.");
         label.setFont(new Font("Serif", Font.BOLD, FONTSIZE));
         add(label, BorderLayout.CENTER);
 
-        // this listener sets the _4_font attribute of
+        // this listener sets the font attribute of
         // the label to the check box state
 
         ActionListener listener = event -> {

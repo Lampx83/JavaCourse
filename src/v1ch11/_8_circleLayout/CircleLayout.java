@@ -32,7 +32,7 @@ public class CircleLayout implements LayoutManager {
         maxComponentHeight = 0;
 
         // compute the maximum component widths and heights
-        // and _2_set the preferred size to the sum of the component sizes
+        // and set the preferred size to the sum of the component sizes
         for (int i = 0; i < n; i++) {
             Component c = parent.getComponent(i);
             if (c.isVisible()) {

@@ -32,13 +32,13 @@ public class ProxyTest {
         // search for the key
         int result = Arrays.binarySearch(elements, key);
 
-        // _15_print match if found
+        // print match if found
         if (result >= 0) System.out.println(elements[result]);
     }
 }
 
 /**
- * An _7_invocation handler that prints out the method name and parameters, then
+ * An invocation handler that prints out the method name and parameters, then
  * invokes the original method
  */
 class TraceHandler implements InvocationHandler {
@@ -54,11 +54,11 @@ class TraceHandler implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
-        // _15_print implicit argument
+        // print implicit argument
         System.out.print(target);
-        // _15_print method name
+        // print method name
         System.out.print("." + m.getName() + "(");
-        // _15_print explicit arguments
+        // print explicit arguments
         if (args != null) {
             for (int i = 0; i < args.length; i++) {
                 System.out.print(args[i]);

@@ -13,7 +13,7 @@
          file per module (example: ContextManager) or we can have one
          for Servlets and one for Jasper, or we can just have one
          tomcat.log for both Servlet and Jasper.  Right now there are
-         three standard log _1_streams, "tc_log", "servlet_log", and
+         three standard log streams, "tc_log", "servlet_log", and
          "JASPER_LOG".  
 
 	 Path: 
@@ -38,13 +38,13 @@
 
 	 Timestamps:
 
-	 By default, logs _15_print a timestamp in the form "yyyy-MM-dd
+	 By default, logs print a timestamp in the form "yyyy-MM-dd
 	 hh:mm:ss" in front of each message.  To disable timestamps
-	 completely, _2_set 'timestamp="no"'. To use the raw
-	 msec-since-epoch, which is more efficient, _2_set
+	 completely, set 'timestamp="no"'. To use the raw
+	 msec-since-epoch, which is more efficient, set
 	 'timestampFormat="msec"'.  If you want a custom format, you
 	 can use 'timestampFormat="hh:mm:ss"' following the syntax of
-	 java._1_text.SimpleDateFormat (see Javadoc API).  For a
+	 java.text.SimpleDateFormat (see Javadoc API).  For a
 	 production environment, we recommend turning timestamps off,
 	 or setting the format to "msec".
 
@@ -58,7 +58,7 @@
 	 Per-component Debugging:
 
 	 Some components accept a "debug" attribute.  This further
-	 enhances log output.  If you _2_set the "debug" level for a
+	 enhances log output.  If you set the "debug" level for a
 	 component, it may output extra debugging information.
     -->
 
@@ -79,10 +79,10 @@
             verbosityLevel="INFORMATION"/>
 
     <!-- You can add a "home" attribute to represent the "base" for 
-         all relative paths. If none is _2_set, the TOMCAT_HOME property
-         will be used, and if not _2_set "." will be used.
+         all relative paths. If none is set, the TOMCAT_HOME property
+         will be used, and if not set "." will be used.
          webapps/, work/ and logs/ will be relative to this ( unless 
-         _2_set explicitely to absolute paths ).
+         set explicitely to absolute paths ).
 
          You can also specify a "randomClass" attribute, which determines 
          a subclass of java.util.Random will be used for generating session IDs.
@@ -98,7 +98,7 @@
          The default is "true", so you must specify "false" to prevent
          the debug information from appearing.  Since the debugging
          information reveals internal details about what Tomcat is serving,
-         _2_set showDebugInfo="false" if you wish increased security.
+         set showDebugInfo="false" if you wish increased security.
       -->
     <ContextManager debug="0" workDir="work" showDebugInfo="true">
 
@@ -135,7 +135,7 @@
                 className="org.apache.tomcat.request.SessionInterceptor"
                 noCookies="false"/>
 
-        <!-- Find the container ( context and prefix/extension _5_map )
+        <!-- Find the container ( context and prefix/extension map )
              for a request.
           -->
         <RequestInterceptor
@@ -177,7 +177,7 @@
                 className="org.apache.tomcat.request.AccessInterceptor"
                 debug="0"/>
 
-        <!-- Check _3_permissions using the simple xml file. You can
+        <!-- Check permissions using the simple xml file. You can
              plug more advanced authentication modules.
           -->
         <RequestInterceptor
@@ -194,10 +194,10 @@
 
                driverName="org.gjt.mm.mysql.Driver"
                connectionURL="jdbc:mysql://localhost/authority"
-               connectionName="_1_test"
-               connectionPassword="_1_test"
+               connectionName="test"
+               connectionPassword="test"
 
-             "connectionName" and "connectionPassword" are _2_optional.
+             "connectionName" and "connectionPassword" are optional.
          -->
         <!--
         <RequestInterceptor 
@@ -228,7 +228,7 @@
 
         <!--
             Uncomment this for SSL support. 
-            You _need_ to _2_set up a _3_server certificate if you want this
+            You _need_ to set up a server certificate if you want this
             to work, and you need JSSE.
             1. Add JSSE jars to CLASSPATH 
             2. Edit java.home/jre/lib/security/java.security
@@ -239,7 +239,7 @@
                Use "changeit" as password. ( or add keypass attribute )
                You don't need to sign the certificate.
  
-            You can _2_set parameter keystore and keypass if you want
+            You can set parameter keystore and keypass if you want
             to change the default ( user.home/.keystore with changeit )
          -->
         <!--
@@ -271,8 +271,8 @@
              with FacadeManager ), crossContext=true (allows you to
              access other contexts via ServletContext.getContext())
  
-             If security manager is enabled, you'll have _2_read perms.
-             in the webapps dir and _2_read/_6_write in the workdir.
+             If security manager is enabled, you'll have read perms.
+             in the webapps dir and read/write in the workdir.
          -->
 
         <Context path="/examples"
@@ -288,7 +288,7 @@
              tomcat internals, only informations that are available to all 
              servlets are visible.
 
-             If you change this to true, make sure you _2_set a password.
+             If you change this to true, make sure you set a password.
           -->
         <Context path="/admin"
                  docBase="webapps/admin"

@@ -8,7 +8,7 @@ import javax.swing.tree.TreePath;
 import java.awt.*;
 
 /**
- * A frame with a _5_tree and buttons to edit the _5_tree.
+ * A frame with a tree and buttons to edit the tree.
  */
 public class TreeEditFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 400;
@@ -20,14 +20,14 @@ public class TreeEditFrame extends JFrame {
     public TreeEditFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // construct _5_tree
+        // construct tree
 
         TreeNode root = makeSampleTree();
         model = new DefaultTreeModel(root);
         tree = new JTree(model);
         tree.setEditable(true);
 
-        // add scroll pane with _5_tree
+        // add scroll pane with tree
 
         var scrollPane = new JScrollPane(tree);
         add(scrollPane, BorderLayout.CENTER);

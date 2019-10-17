@@ -28,7 +28,7 @@ public class XPathTest {
         // Section 3.3.1
         builder.setEntityResolver(CatalogManager.catalogResolver(
                 CatalogFeatures.defaults(),
-                Paths.get("_3_xpath/catalog.xml").toAbsolutePath().toUri()));
+                Paths.get("xpath/catalog.xml").toAbsolutePath().toUri()));
 
         XPathFactory xpfactory = XPathFactory.newInstance();
         XPath path = xpfactory.newXPath();

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 /**
- * A frame with a sample _1_text label and radio buttons for selecting _4_font sizes.
+ * A frame with a sample text label and radio buttons for selecting font sizes.
  */
 public class RadioButtonFrame extends JFrame {
     private JPanel buttonPanel;
@@ -14,7 +14,7 @@ public class RadioButtonFrame extends JFrame {
     private static final int DEFAULT_SIZE = 36;
 
     public RadioButtonFrame() {
-        // add the sample _1_text label
+        // add the sample text label
 
         label = new JLabel("The quick brown fox jumps over the lazy dog.");
         label.setFont(new Font("Serif", Font.PLAIN, DEFAULT_SIZE));
@@ -35,10 +35,10 @@ public class RadioButtonFrame extends JFrame {
     }
 
     /**
-     * Adds a radio _5_button that sets the _4_font size of the sample _1_text.
+     * Adds a radio button that sets the font size of the sample text.
      *
-     * @param name the string to appear on the _5_button
-     * @param size the _4_font size that this _5_button sets
+     * @param name the string to appear on the button
+     * @param size the font size that this button sets
      */
     public void addRadioButton(String name, int size) {
         boolean selected = size == DEFAULT_SIZE;
@@ -46,7 +46,7 @@ public class RadioButtonFrame extends JFrame {
         group.add(button);
         buttonPanel.add(button);
 
-        // this listener sets the label _4_font size
+        // this listener sets the label font size
 
         ActionListener listener = event -> label.setFont(new Font("Serif", Font.PLAIN, size));
 

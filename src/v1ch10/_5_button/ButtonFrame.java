@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A frame with a _5_button panel.
+ * A frame with a button panel.
  */
 public class ButtonFrame extends JFrame {
     private JPanel buttonPanel;
@@ -31,7 +31,7 @@ public class ButtonFrame extends JFrame {
         // add panel to frame
         add(buttonPanel);
 
-        // create _5_button actions
+        // create button actions
         var yellowAction = new ColorAction(Color.YELLOW);
         var blueAction = new ColorAction(Color.BLUE);
         var redAction = new ColorAction(Color.RED);

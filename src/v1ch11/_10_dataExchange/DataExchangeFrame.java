@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A frame with a _6_menu whose File->Connect action shows a password _9_dialog.
+ * A frame with a menu whose File->Connect action shows a password dialog.
  */
 public class DataExchangeFrame extends JFrame {
     public static final int TEXT_ROWS = 20;
@@ -15,14 +15,14 @@ public class DataExchangeFrame extends JFrame {
     private JTextArea textArea;
 
     public DataExchangeFrame() {
-        // construct a File _6_menu
+        // construct a File menu
 
         var mbar = new JMenuBar();
         setJMenuBar(mbar);
         var fileMenu = new JMenu("File");
         mbar.add(fileMenu);
 
-        // add Connect and Exit _6_menu items
+        // add Connect and Exit menu items
 
         var connectItem = new JMenuItem("Connect");
         connectItem.addActionListener(new ConnectAction());
@@ -40,18 +40,18 @@ public class DataExchangeFrame extends JFrame {
     }
 
     /**
-     * The Connect action pops up the password _9_dialog.
+     * The Connect action pops up the password dialog.
      */
     private class ConnectAction implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            // if first time, construct _9_dialog
+            // if first time, construct dialog
 
             if (dialog == null) dialog = new PasswordChooser();
 
-            // _2_set default values
+            // set default values
             dialog.setUser(new User("yourname", null));
 
-            // pop up _9_dialog
+            // pop up dialog
             if (dialog.showDialog(DataExchangeFrame.this, "Connect")) {
                 // if accepted, retrieve user input
                 User u = dialog.getUser();

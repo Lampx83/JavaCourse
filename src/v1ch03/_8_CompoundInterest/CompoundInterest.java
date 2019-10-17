@@ -12,14 +12,14 @@ public class CompoundInterest {
         final int NRATES = 6;
         final int NYEARS = 10;
 
-        // _2_set interest rates to 10 . . . 15%
+        // set interest rates to 10 . . . 15%
         double[] interestRate = new double[NRATES];
         for (int j = 0; j < interestRate.length; j++)
             interestRate[j] = (STARTRATE + j) / 100.0;
 
         double[][] balances = new double[NYEARS][NRATES];
 
-        // _2_set initial balances to 10000
+        // set initial balances to 10000
         for (int j = 0; j < balances[0].length; j++)
             balances[0][j] = 10000;
 
@@ -37,15 +37,15 @@ public class CompoundInterest {
             }
         }
 
-        // _15_print one row of interest rates
+        // print one row of interest rates
         for (int j = 0; j < interestRate.length; j++)
             System.out.printf("%9.0f%%", 100 * interestRate[j]);
 
         System.out.println();
 
-        // _15_print balance _1_table
+        // print balance table
         for (double[] row : balances) {
-            // _15_print _1_table row
+            // print table row
             for (double b : row)
                 System.out.printf("%10.2f", b);
 

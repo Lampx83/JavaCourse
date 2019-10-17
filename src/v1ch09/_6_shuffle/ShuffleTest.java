@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * This program demonstrates the random _6_shuffle and sort algorithms.
+ * This program demonstrates the random shuffle and sort algorithms.
  *
  * @author Cay Horstmann
  * @version 1.12 2018-04-10

@@ -6,7 +6,7 @@ import javax.swing.filechooser.FileView;
 import java.io.File;
 
 /**
- * A file _4_view that displays an icon for all files that match a file filter.
+ * A file view that displays an icon for all files that match a file filter.
  */
 public class FileIconView extends FileView {
     private FileFilter filter;

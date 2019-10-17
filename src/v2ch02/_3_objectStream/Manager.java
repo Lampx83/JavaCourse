@@ -6,7 +6,7 @@ public class Manager extends Employee {
     /**
      * Constructs a Manager without a secretary
      *
-     * @param n     the _4_employee's name
+     * @param n     the employee's name
      * @param s     the salary
      * @param year  the hire year
      * @param month the hire month

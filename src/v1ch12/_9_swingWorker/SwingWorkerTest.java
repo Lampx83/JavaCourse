@@ -28,7 +28,7 @@ public class SwingWorkerTest {
 }
 
 /**
- * This frame has a _1_text area to show the contents of a _1_text file, a _6_menu to open a file and
+ * This frame has a text area to show the contents of a text file, a menu to open a file and
  * cancel the opening process, and a status line to show the file loading progress.
  */
 class SwingWorkerFrame extends JFrame {
@@ -60,10 +60,10 @@ class SwingWorkerFrame extends JFrame {
         openItem = new JMenuItem("Open");
         menu.add(openItem);
         openItem.addActionListener(event -> {
-            // show file chooser _9_dialog
+            // show file chooser dialog
             int result = chooser.showOpenDialog(null);
 
-            // if file selected, _2_set it as icon of the label
+            // if file selected, set it as icon of the label
             if (result == JFileChooser.APPROVE_OPTION) {
                 textArea.setText("");
                 openItem.setEnabled(false);
@@ -106,7 +106,7 @@ class SwingWorkerFrame extends JFrame {
                     data.number = lineNumber;
                     data.line = line;
                     publish(data);
-                    Thread.sleep(1); // to _1_test cancellation; no need to do this in your programs
+                    Thread.sleep(1); // to test cancellation; no need to do this in your programs
                 }
             }
             return text;

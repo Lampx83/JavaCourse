@@ -11,7 +11,7 @@ import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 
 /**
- * A banner that prints a _1_text string on multiple pages.
+ * A banner that prints a text string on multiple pages.
  */
 public class Banner implements Printable {
     private String message;

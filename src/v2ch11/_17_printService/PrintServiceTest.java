@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * This program demonstrates the use of stream _15_print services. The program prints
+ * This program demonstrates the use of stream print services. The program prints
  * Java 2D shapes to a PostScript file. If you don't supply a file name on the command
  * line, the output is saved to out.ps.
  *

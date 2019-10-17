@@ -9,7 +9,7 @@ import java.net.URL;
 /**
  * This program demonstrates how to use a StAX parser. The program prints all
  * hyperlinks links of an XHTML web page. <br>
- * Usage: java _5_stax.StAXTest URL
+ * Usage: java stax.StAXTest URL
  *
  * @author Cay Horstmann
  * @version 1.1 2018-05-01

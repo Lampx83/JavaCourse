@@ -27,7 +27,7 @@ public class ImagePreviewer extends JLabel {
                     return;
                 }
 
-                // _2_read the image into an icon
+                // read the image into an icon
                 var icon = new ImageIcon(f.getPath());
 
                 // if the icon is too large to fit, scale it

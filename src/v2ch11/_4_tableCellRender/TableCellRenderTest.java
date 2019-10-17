@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates cell rendering and editing in a _1_table.
+ * This program demonstrates cell rendering and editing in a table.
  *
  * @author Cay Horstmann
  * @version 1.05 2018-05-01

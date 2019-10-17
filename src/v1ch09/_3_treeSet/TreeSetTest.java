@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.TreeSet;
 
 /**
- * This program sorts a _2_set of Item objects by comparing their descriptions.
+ * This program sorts a set of Item objects by comparing their descriptions.
  *
  * @author Cay Horstmann
  * @version 1.13 2018-04-10

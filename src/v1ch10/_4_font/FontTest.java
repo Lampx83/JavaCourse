@@ -23,7 +23,7 @@ public class FontTest {
 }
 
 /**
- * A frame with a _1_text message component.
+ * A frame with a text message component.
  */
 class FontFrame extends JFrame {
     public FontFrame() {
@@ -52,7 +52,7 @@ class FontComponent extends JComponent {
         FontRenderContext context = g2.getFontRenderContext();
         Rectangle2D bounds = f.getStringBounds(message, context);
 
-        // _2_set (x,y) = top left corner of _1_text
+        // set (x,y) = top left corner of text
 
         double x = (getWidth() - bounds.getWidth()) / 2;
         double y = (getHeight() - bounds.getHeight()) / 2;
@@ -62,17 +62,17 @@ class FontComponent extends JComponent {
         double ascent = -bounds.getY();
         double baseY = y + ascent;
 
-        // _3_draw the message
+        // draw the message
 
         g2.drawString(message, (int) x, (int) baseY);
 
         g2.setPaint(Color.LIGHT_GRAY);
 
-        // _3_draw the baseline
+        // draw the baseline
 
         g2.draw(new Line2D.Double(x, baseY, x + bounds.getWidth(), baseY));
 
-        // _3_draw the enclosing rectangle
+        // draw the enclosing rectangle
 
         var rect = new Rectangle2D.Double(x, y, bounds.getWidth(), bounds.getHeight());
         g2.draw(rect);

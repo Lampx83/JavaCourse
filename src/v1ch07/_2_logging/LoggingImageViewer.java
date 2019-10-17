@@ -17,8 +17,8 @@ import java.util.logging.*;
  */
 public class LoggingImageViewer {
     public static void main(String[] args) {
-        if (System.getProperty("java.util._2_logging.config.class") == null
-                && System.getProperty("java.util._2_logging.config.file") == null) {
+        if (System.getProperty("java.util.logging.config.class") == null
+                && System.getProperty("java.util.logging.config.file") == null) {
             try {
                 Logger.getLogger("com.horstmann.corejava").setLevel(Level.ALL);
                 final int LOG_ROTATION_COUNT = 10;
@@ -60,7 +60,7 @@ class ImageViewerFrame extends JFrame {
         logger.entering("ImageViewerFrame", "<init>");
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // _2_set up _6_menu bar
+        // set up menu bar
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
@@ -90,7 +90,7 @@ class ImageViewerFrame extends JFrame {
         public void actionPerformed(ActionEvent event) {
             logger.entering("ImageViewerFrame.FileOpenListener", "actionPerformed", event);
 
-            // _2_set up file chooser
+            // set up file chooser
             var chooser = new JFileChooser();
             chooser.setCurrentDirectory(new File("."));
 
@@ -105,15 +105,15 @@ class ImageViewerFrame extends JFrame {
                 }
             });
 
-            // show file chooser _9_dialog
+            // show file chooser dialog
             int r = chooser.showOpenDialog(ImageViewerFrame.this);
 
-            // if image file accepted, _2_set it as icon of the label
+            // if image file accepted, set it as icon of the label
             if (r == JFileChooser.APPROVE_OPTION) {
                 String name = chooser.getSelectedFile().getPath();
                 logger.log(Level.FINE, "Reading file {0}", name);
                 label.setIcon(new ImageIcon(name));
-            } else logger.fine("File open _9_dialog canceled.");
+            } else logger.fine("File open dialog canceled.");
             logger.exiting("ImageViewerFrame.FileOpenListener", "actionPerformed");
         }
     }

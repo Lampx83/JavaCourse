@@ -13,7 +13,7 @@ import java.util.Scanner;
  * This program connects to an URL and displays the response header data and the first
  * 10 lines of the requested data.
  * <p>
- * Supply the URL and an _2_optional username and password (for HTTP basic authentication) on the
+ * Supply the URL and an optional username and password (for HTTP basic authentication) on the
  * command line.
  *
  * @author Cay Horstmann
@@ -29,7 +29,7 @@ public class URLConnectionTest {
             var url = new URL(urlName);
             URLConnection connection = url.openConnection();
 
-            // _2_set username, password if specified on command line
+            // set username, password if specified on command line
 
             if (args.length > 2) {
                 String username = args[1];
@@ -42,7 +42,7 @@ public class URLConnectionTest {
 
             connection.connect();
 
-            // _15_print header fields
+            // print header fields
 
             Map<String, List<String>> headers = connection.getHeaderFields();
             for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
@@ -51,7 +51,7 @@ public class URLConnectionTest {
                     System.out.println(key + ": " + value);
             }
 
-            // _15_print convenience functions
+            // print convenience functions
 
             System.out.println("----------");
             System.out.println("getContentType: " + connection.getContentType());
@@ -65,7 +65,7 @@ public class URLConnectionTest {
             String encoding = connection.getContentEncoding();
             if (encoding == null) encoding = "UTF-8";
             try (var in = new Scanner(connection.getInputStream(), encoding)) {
-                // _15_print first ten lines of contents
+                // print first ten lines of contents
 
                 for (int n = 1; in.hasNextLine() && n <= 10; n++)
                     System.out.println(in.nextLine());

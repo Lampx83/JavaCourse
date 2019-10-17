@@ -7,7 +7,7 @@ import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 
 /**
- * This class implements a generic _15_print preview _9_dialog.
+ * This class implements a generic print preview dialog.
  */
 public class PrintPreviewDialog extends JDialog {
     private static final int DEFAULT_WIDTH = 300;
@@ -16,7 +16,7 @@ public class PrintPreviewDialog extends JDialog {
     private PrintPreviewCanvas canvas;
 
     /**
-     * Constructs a _15_print preview _9_dialog.
+     * Constructs a print preview dialog.
      *
      * @param p     a Printable
      * @param pf    the page format
@@ -29,7 +29,7 @@ public class PrintPreviewDialog extends JDialog {
     }
 
     /**
-     * Constructs a _15_print preview _9_dialog.
+     * Constructs a print preview dialog.
      *
      * @param b a Book
      */
@@ -38,9 +38,9 @@ public class PrintPreviewDialog extends JDialog {
     }
 
     /**
-     * Lays out the UI of the _9_dialog.
+     * Lays out the UI of the dialog.
      *
-     * @param book the _16_book to be previewed
+     * @param book the book to be previewed
      */
     public void layoutUI(Book book) {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);

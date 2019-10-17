@@ -21,13 +21,13 @@ public class RandomAccessTest {
         staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
         staff[2] = new Employee("Tony Tester", 40000, 1990, 3, 15);
 
-        Path path = Paths.get("_4_employee.dat");
+        Path path = Paths.get("employee.dat");
         ByteBuffer buffer = ByteBuffer.allocate(Employee.RECORD_SIZE);
 
         try (FileChannel channel = FileChannel.open(path,
                 StandardOpenOption.CREATE, StandardOpenOption.WRITE,
                 StandardOpenOption.TRUNCATE_EXISTING)) {
-            // save all _4_employee records to the file _4_employee.dat
+            // save all employee records to the file employee.dat
             for (Employee e : staff) {
                 buffer.clear();
                 writeData(buffer, e);
@@ -42,7 +42,7 @@ public class RandomAccessTest {
             int n = (int) (Files.size(path)) / Employee.RECORD_SIZE;
             var newStaff = new Employee[n];
 
-            // _2_read employees in reverse order
+            // read employees in reverse order
             for (int i = n - 1; i >= 0; i--) {
                 channel.position(i * Employee.RECORD_SIZE);
                 buffer.clear();
@@ -51,7 +51,7 @@ public class RandomAccessTest {
                 newStaff[i] = readData(buffer);
             }
 
-            // _15_print the newly _2_read _4_employee records
+            // print the newly read employee records
             for (Employee e : newStaff)
                 System.out.println(e);
         }
@@ -59,10 +59,10 @@ public class RandomAccessTest {
 
 
     /**
-     * Writes _4_employee data to a byte buffer
+     * Writes employee data to a byte buffer
      *
      * @param out the buffer
-     * @param e   the _4_employee
+     * @param e   the employee
      */
     public static void writeData(ByteBuffer out, Employee e) throws IOException {
         String name = e.getName();
@@ -78,10 +78,10 @@ public class RandomAccessTest {
     }
 
     /**
-     * Reads _4_employee data from a byte buffer
+     * Reads employee data from a byte buffer
      *
      * @param in the buffer
-     * @return the _4_employee
+     * @return the employee
      */
     public static Employee readData(ByteBuffer in) throws IOException {
         var name = new StringBuilder();

@@ -42,7 +42,7 @@ class DrawComponent extends JComponent {
     public void paintComponent(Graphics g) {
         var g2 = (Graphics2D) g;
 
-        // _3_draw a rectangle
+        // draw a rectangle
 
         double leftX = 100;
         double topY = 100;
@@ -52,17 +52,17 @@ class DrawComponent extends JComponent {
         var rect = new Rectangle2D.Double(leftX, topY, width, height);
         g2.draw(rect);
 
-        // _3_draw the enclosed ellipse
+        // draw the enclosed ellipse
 
         var ellipse = new Ellipse2D.Double();
         ellipse.setFrame(rect);
         g2.draw(ellipse);
 
-        // _3_draw a diagonal line
+        // draw a diagonal line
 
         g2.draw(new Line2D.Double(leftX, topY, leftX + width, topY + height));
 
-        // _3_draw a circle with the same center
+        // draw a circle with the same center
 
         double centerX = rect.getCenterX();
         double centerY = rect.getCenterY();

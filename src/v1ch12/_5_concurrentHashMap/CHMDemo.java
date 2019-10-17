@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * This program demonstrates concurrent _6_hash maps.
+ * This program demonstrates concurrent hash maps.
  *
  * @author Cay Horstmann
  * @version 1.0 2018-01-04
@@ -19,7 +19,7 @@ public class CHMDemo {
     public static ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();
 
     /**
-     * Adds all words in the given file to the concurrent _6_hash _5_map.
+     * Adds all words in the given file to the concurrent hash map.
      *
      * @param file a file
      */
@@ -38,7 +38,7 @@ public class CHMDemo {
      * Returns all descendants of a given directory--see Chapters 1 and 2 of Volume II
      *
      * @param rootDir the root directory
-     * @return a _2_set of all descendants of the root directory
+     * @return a set of all descendants of the root directory
      */
     public static Set<Path> descendants(Path rootDir) throws IOException {
         try (Stream<Path> entries = Files.walk(rootDir)) {

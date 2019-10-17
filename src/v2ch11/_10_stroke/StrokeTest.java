@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
 /**
- * This program demonstrates different _10_stroke types.
+ * This program demonstrates different stroke types.
  *
  * @author Cay Horstmann
  * @version 1.05 2018-05-01
@@ -29,7 +29,7 @@ public class StrokeTest {
 
 /**
  * This frame lets the user choose the cap, join, and line style, and shows the resulting
- * _10_stroke.
+ * stroke.
  */
 class StrokeTestFrame extends JFrame {
     private StrokeComponent canvas;
@@ -59,14 +59,14 @@ class StrokeTestFrame extends JFrame {
     }
 
     /**
-     * Makes a radio _5_button to change the cap style.
+     * Makes a radio button to change the cap style.
      *
-     * @param label the _5_button label
+     * @param label the button label
      * @param style the cap style
-     * @param group the radio _5_button group
+     * @param group the radio button group
      */
     private void makeCapButton(String label, final int style, ButtonGroup group) {
-        // select first _5_button in group
+        // select first button in group
         boolean selected = group.getButtonCount() == 0;
         var button = new JRadioButton(label, selected);
         buttonPanel.add(button);
@@ -76,14 +76,14 @@ class StrokeTestFrame extends JFrame {
     }
 
     /**
-     * Makes a radio _5_button to change the join style.
+     * Makes a radio button to change the join style.
      *
-     * @param label the _5_button label
+     * @param label the button label
      * @param style the join style
-     * @param group the radio _5_button group
+     * @param group the radio button group
      */
     private void makeJoinButton(String label, final int style, ButtonGroup group) {
-        // select first _5_button in group
+        // select first button in group
         boolean selected = group.getButtonCount() == 0;
         var button = new JRadioButton(label, selected);
         buttonPanel.add(button);
@@ -92,14 +92,14 @@ class StrokeTestFrame extends JFrame {
     }
 
     /**
-     * Makes a radio _5_button to _2_set solid or dashed lines.
+     * Makes a radio button to set solid or dashed lines.
      *
-     * @param label the _5_button label
+     * @param label the button label
      * @param style false for solid, true for dashed lines
-     * @param group the radio _5_button group
+     * @param group the radio button group
      */
     private void makeDashButton(String label, final boolean style, ButtonGroup group) {
-        // select first _5_button in group
+        // select first button in group
         boolean selected = group.getButtonCount() == 0;
         var button = new JRadioButton(label, selected);
         buttonPanel.add(button);
@@ -109,7 +109,7 @@ class StrokeTestFrame extends JFrame {
 }
 
 /**
- * This component draws two joined lines, using different _10_stroke objects, and allows the user
+ * This component draws two joined lines, using different stroke objects, and allows the user
  * to drag the three points defining the lines.
  */
 class StrokeComponent extends JComponent {

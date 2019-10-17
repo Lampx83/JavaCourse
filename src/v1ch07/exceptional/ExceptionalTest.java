@@ -13,7 +13,7 @@ public class ExceptionalTest {
         int ntry = 10000000;
         var stack = new Stack<String>();
 
-        // _1_test a stack for emptiness ntry times
+        // test a stack for emptiness ntry times
         System.out.println("Testing for empty stack");
         long start = System.currentTimeMillis();
         for (i = 0; i <= ntry; i++)

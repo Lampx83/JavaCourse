@@ -9,7 +9,7 @@ public class CalendarTest {
         int month = date.getMonthValue();
         int today = date.getDayOfMonth();
 
-        date = date.minusDays(today - 1); // _2_set to start of month
+        date = date.minusDays(today - 1); // set to start of month
         DayOfWeek weekday = date.getDayOfWeek();
         int value = weekday.getValue(); // 1 = Monday, . . . , 7 = Sunday
 

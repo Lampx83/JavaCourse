@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates how to _15_print 2D graphics
+ * This program demonstrates how to print 2D graphics
  *
  * @author Cay Horstmann
  * @version 1.14 2018-05-01

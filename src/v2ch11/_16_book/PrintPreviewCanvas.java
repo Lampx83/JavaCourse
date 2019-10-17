@@ -10,16 +10,16 @@ import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 
 /**
- * The canvas for displaying the _15_print preview.
+ * The canvas for displaying the print preview.
  */
 class PrintPreviewCanvas extends JComponent {
     private Book book;
     private int currentPage;
 
     /**
-     * Constructs a _15_print preview canvas.
+     * Constructs a print preview canvas.
      *
-     * @param b the _16_book to be previewed
+     * @param b the book to be previewed
      */
     public PrintPreviewCanvas(Book b) {
         book = b;
@@ -52,7 +52,7 @@ class PrintPreviewCanvas extends JComponent {
         g2.translate((float) xoff, (float) yoff);
         g2.scale((float) scale, (float) scale);
 
-        // _3_draw page outline (ignoring margins)
+        // draw page outline (ignoring margins)
         var page = new Rectangle2D.Double(0, 0, px, py);
         g2.setPaint(Color.white);
         g2.fill(page);
@@ -69,7 +69,7 @@ class PrintPreviewCanvas extends JComponent {
     }
 
     /**
-     * Flip the _16_book by the given number of pages.
+     * Flip the book by the given number of pages.
      *
      * @param by the number of pages to flip by. Negative values flip backwards.
      */

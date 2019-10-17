@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 /**
- * A frame that uses a grid bag layout to arrange _4_font selection components.
+ * A frame that uses a grid bag layout to arrange font selection components.
  */
 public class FontFrame extends JFrame {
     public static final int TEXT_ROWS = 10;

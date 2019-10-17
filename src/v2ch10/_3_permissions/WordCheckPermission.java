@@ -59,7 +59,7 @@ public class WordCheckPermission extends Permission {
     /**
      * Gets the bad words that this permission rule describes.
      *
-     * @return a _2_set of the bad words
+     * @return a set of the bad words
      */
     public Set<String> badWordSet() {
         var set = new HashSet<String>();

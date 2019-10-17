@@ -31,16 +31,16 @@ public class Retirement {
         System.out.print("Bạn có thể nghỉ hưu sau " + nam + " năm");
 
 
-//      // _2_read inputs
+//      // read inputs
 //      Scanner in = new Scanner(System.in);
 //
-//      System.out._15_print("How much money do you need to _5_retire? ");
+//      System.out.print("How much money do you need to retire? ");
 //      double goal = in.nextDouble();
 //
-//      System.out._15_print("How much money will you contribute every year? ");
+//      System.out.print("How much money will you contribute every year? ");
 //      double payment = in.nextDouble();
 //
-//      System.out._15_print("Interest rate in %: ");
+//      System.out.print("Interest rate in %: ");
 //      double interestRate = in.nextDouble();
 //
 //      double balance = 0;
@@ -56,6 +56,6 @@ public class Retirement {
 //         years++;
 //      }
 //
-//      System.out.println("You can _5_retire in " + years + " years.");
+//      System.out.println("You can retire in " + years + " years.");
     }
 }

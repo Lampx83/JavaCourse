@@ -28,7 +28,7 @@ public class LotteryArray {
                 odds[n][k] = lotteryOdds;
             }
 
-        // _15_print triangular array
+        // print triangular array
         for (int[] row : odds) {
             for (int odd : row)
                 System.out.printf("%4d", odd);

@@ -1,7 +1,7 @@
 package v1ch12._2_unsynch;
 
 /**
- * This program shows data corruption when multiple _1_threads access a data structure.
+ * This program shows data corruption when multiple threads access a data structure.
  *
  * @author Cay Horstmann
  * @version 1.32 2018-04-10

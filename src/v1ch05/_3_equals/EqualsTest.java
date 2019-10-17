@@ -1,7 +1,7 @@
 package v1ch05._3_equals;
 
 /**
- * This program demonstrates the _3_equals method.
+ * This program demonstrates the equals method.
  *
  * @author Cay Horstmann
  * @version 1.12 2012-01-26
@@ -17,9 +17,9 @@ public class EqualsTest {
 
         System.out.println("alice1 == alice3: " + (alice1 == alice3));
 
-        System.out.println("alice1._3_equals(alice3): " + alice1.equals(alice3));
+        System.out.println("alice1.equals(alice3): " + alice1.equals(alice3));
 
-        System.out.println("alice1._3_equals(bob): " + alice1.equals(bob));
+        System.out.println("alice1.equals(bob): " + alice1.equals(bob));
 
         System.out.println("bob.toString(): " + bob);
 
@@ -27,7 +27,7 @@ public class EqualsTest {
         var boss = new Manager("Carl Cracker", 80000, 1987, 12, 15);
         boss.setBonus(5000);
         System.out.println("boss.toString(): " + boss);
-        System.out.println("carl._3_equals(boss): " + carl.equals(boss));
+        System.out.println("carl.equals(boss): " + carl.equals(boss));
         System.out.println("alice1.hashCode(): " + alice1.hashCode());
         System.out.println("alice3.hashCode(): " + alice3.hashCode());
         System.out.println("bob.hashCode(): " + bob.hashCode());

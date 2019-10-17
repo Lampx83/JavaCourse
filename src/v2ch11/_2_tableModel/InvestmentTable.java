@@ -5,7 +5,7 @@ import javax.swing.table.AbstractTableModel;
 import java.awt.*;
 
 /**
- * This program shows how to build a _1_table from a _1_table model.
+ * This program shows how to build a table from a table model.
  *
  * @author Cay Horstmann
  * @version 1.04 2018-05-01
@@ -23,7 +23,7 @@ public class InvestmentTable {
 }
 
 /**
- * This frame contains the investment _1_table.
+ * This frame contains the investment table.
  */
 class InvestmentTableFrame extends JFrame {
     public InvestmentTableFrame() {
@@ -35,7 +35,7 @@ class InvestmentTableFrame extends JFrame {
 }
 
 /**
- * This _1_table model computes the cell entries each time they are requested. The _1_table contents
+ * This table model computes the cell entries each time they are requested. The table contents
  * shows the growth of an investment for a number of years under different interest rates.
  */
 class InvestmentTableModel extends AbstractTableModel {
@@ -46,7 +46,7 @@ class InvestmentTableModel extends AbstractTableModel {
     private int maxRate;
 
     /**
-     * Constructs an investment _1_table model.
+     * Constructs an investment table model.
      *
      * @param y  the number of years
      * @param r1 the lowest interest rate to tabulate

@@ -60,10 +60,10 @@ public class CalculatorPanel extends JPanel {
     }
 
     /**
-     * Adds a _5_button to the center panel.
+     * Adds a button to the center panel.
      *
-     * @param label    the _5_button label
-     * @param listener the _5_button listener
+     * @param label    the button label
+     * @param listener the button listener
      */
     private void addButton(String label, ActionListener listener) {
         var button = new JButton(label);
@@ -72,7 +72,7 @@ public class CalculatorPanel extends JPanel {
     }
 
     /**
-     * This action inserts the _5_button action string to the end of the display _1_text.
+     * This action inserts the button action string to the end of the display text.
      */
     private class InsertAction implements ActionListener {
         public void actionPerformed(ActionEvent event) {
@@ -86,7 +86,7 @@ public class CalculatorPanel extends JPanel {
     }
 
     /**
-     * This action executes the command that the _5_button action string denotes.
+     * This action executes the command that the button action string denotes.
      */
     private class CommandAction implements ActionListener {
         public void actionPerformed(ActionEvent event) {

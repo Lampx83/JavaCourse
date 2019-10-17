@@ -5,7 +5,7 @@ import javax.swing.table.AbstractTableModel;
 import java.awt.*;
 
 /**
- * The planet _1_table model specifies the values, rendering and editing properties for the
+ * The planet table model specifies the values, rendering and editing properties for the
  * planet data.
  */
 public class PlanetTableModel extends AbstractTableModel {

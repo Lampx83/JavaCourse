@@ -13,7 +13,7 @@ import java.util.Comparator;
 import java.util.Locale;
 
 /**
- * This program demonstrates _4_formatting dates under various locales.
+ * This program demonstrates formatting dates under various locales.
  *
  * @author Cay Horstmann
  * @version 1.01 2018-05-01
@@ -31,8 +31,8 @@ public class DateTimeFormatterTest {
 }
 
 /**
- * This frame contains combo boxes to pick a locale, date and time formats, _1_text fields to
- * display formatted date and time, buttons to parse the _1_text field contents, and a "lenient"
+ * This frame contains combo boxes to pick a locale, date and time formats, text fields to
+ * display formatted date and time, buttons to parse the text field contents, and a "lenient"
  * check box.
  */
 class DateTimeFormatterFrame extends JFrame {
@@ -108,10 +108,10 @@ class DateTimeFormatterFrame extends JFrame {
     }
 
     /**
-     * Adds the given action to the _5_button and updates the display upon completion.
+     * Adds the given action to the button and updates the display upon completion.
      *
-     * @param button the _5_button to which to add the action
-     * @param action the action to carry out when the _5_button is clicked
+     * @param button the button to which to add the action
+     * @param action the action to carry out when the button is clicked
      */
     public void addAction(JButton button, Runnable action) {
         button.addActionListener(event ->

@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 public class Caesar {
     public static void main(String[] args) throws Exception {
         if (args.length != 3) {
-            System.out.println("USAGE: java _1_classLoader.Caesar in out key");
+            System.out.println("USAGE: java classLoader.Caesar in out key");
             return;
         }
 

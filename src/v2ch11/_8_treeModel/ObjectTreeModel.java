@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 /**
- * This _5_tree model describes the _5_tree structure of a Java object. Children are the objects
+ * This tree model describes the tree structure of a Java object. Children are the objects
  * that are stored in instance variables.
  */
 public class ObjectTreeModel implements TreeModel {
@@ -17,7 +17,7 @@ public class ObjectTreeModel implements TreeModel {
     private EventListenerList listenerList = new EventListenerList();
 
     /**
-     * Constructs an empty _5_tree.
+     * Constructs an empty tree.
      */
     public ObjectTreeModel() {
         root = null;
@@ -26,7 +26,7 @@ public class ObjectTreeModel implements TreeModel {
     /**
      * Sets the root to a given variable.
      *
-     * @param v the variable that is being described by this _5_tree
+     * @param v the variable that is being described by this tree
      */
     public void setRoot(Variable v) {
         Variable oldRoot = v;

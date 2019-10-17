@@ -60,13 +60,13 @@ class TypeLiteral<T> {
 }
 
 /**
- * Formats objects, using rules that associate types with _4_formatting functions.
+ * Formats objects, using rules that associate types with formatting functions.
  */
 class Formatter {
     private Map<TypeLiteral<?>, Function<?, String>> rules = new HashMap<>();
 
     /**
-     * Add a _4_formatting rule to this formatter.
+     * Add a formatting rule to this formatter.
      *
      * @param type             the type to which this rule applies
      * @param formatterForType the function that formats objects of this type

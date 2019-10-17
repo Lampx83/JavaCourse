@@ -46,7 +46,7 @@ public class PairTest3 {
         minmaxBonus(a, result);
         PairAlg.swapHelper(result); // OK--swapHelper captures wildcard type
     }
-    // can't _6_write public static <T super manager> . . .
+    // can't write public static <T super manager> . . .
 }
 
 class PairAlg {

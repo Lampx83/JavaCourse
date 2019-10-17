@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * This program shows how to use JavaMail to send _9_mail messages.
+ * This program shows how to use JavaMail to send mail messages.
  *
  * @author Cay Horstmann
  * @version 1.01 2018-03-17
@@ -24,7 +24,7 @@ import java.util.Properties;
 public class MailTest {
     public static void main(String[] args) throws MessagingException, IOException {
         var props = new Properties();
-        try (InputStream in = Files.newInputStream(Paths.get("_9_mail", "_9_mail.properties"))) {
+        try (InputStream in = Files.newInputStream(Paths.get("mail", "mail.properties"))) {
             props.load(in);
         }
         List<String> lines = Files.readAllLines(Paths.get(args[0]), StandardCharsets.UTF_8);

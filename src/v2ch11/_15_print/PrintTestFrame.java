@@ -8,7 +8,7 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 
 /**
- * This frame shows a panel with 2D graphics and buttons to _15_print the graphics and to _2_set up
+ * This frame shows a panel with 2D graphics and buttons to print the graphics and to set up
  * the page format.
  */
 public class PrintTestFrame extends JFrame {

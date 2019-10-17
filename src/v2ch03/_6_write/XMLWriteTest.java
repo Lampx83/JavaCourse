@@ -21,7 +21,7 @@ import java.nio.file.Paths;
 import java.util.Random;
 
 /**
- * This program shows how to _6_write an XML file. It produces modern art in SVG
+ * This program shows how to write an XML file. It produces modern art in SVG
  * format.
  *
  * @author Cay Horstmann
@@ -39,7 +39,7 @@ public class XMLWriteTest {
     /**
      * Creates a new random drawing.
      *
-     * @return the DOM _5_tree of the SVG document
+     * @return the DOM tree of the SVG document
      */
     public static Document newDrawing(int drawingWidth, int drawingHeight)
             throws ParserConfigurationException {

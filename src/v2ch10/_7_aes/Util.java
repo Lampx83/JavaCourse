@@ -8,7 +8,7 @@ import java.security.GeneralSecurityException;
 
 public class Util {
     /**
-     * Uses a cipher to _7_transform the bytes in an input stream and sends the transformed bytes
+     * Uses a cipher to transform the bytes in an input stream and sends the transformed bytes
      * to an output stream.
      *
      * @param in     the input stream

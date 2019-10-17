@@ -19,7 +19,7 @@ import java.util.Scanner;
  */
 public class PostTest {
     public static void main(String[] args) throws IOException {
-        String propsFilename = args.length > 0 ? args[0] : "_7_post/_7_post.properties";
+        String propsFilename = args.length > 0 ? args[0] : "post/post.properties";
         var props = new Properties();
         try (InputStream in = Files.newInputStream(Paths.get(propsFilename))) {
             props.load(in);
@@ -37,12 +37,12 @@ public class PostTest {
     /**
      * Do an HTTP POST.
      *
-     * @param url            the URL to _7_post to
-     * @param nameValuePairs the _3_query parameters
+     * @param url            the URL to post to
+     * @param nameValuePairs the query parameters
      * @param userAgent      the user agent to use, or null for the default user agent
      * @param redirects      the number of redirects to follow manually, or -1 for automatic
      *                       redirects
-     * @return the data returned from the _3_server
+     * @return the data returned from the server
      */
     public static String doPost(URL url, Map<Object, Object> nameValuePairs, String userAgent,
                                 int redirects) throws IOException {

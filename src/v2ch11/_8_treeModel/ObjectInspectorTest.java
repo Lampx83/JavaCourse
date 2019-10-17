@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates how to use a custom _5_tree model. It displays the fields of an object.
+ * This program demonstrates how to use a custom tree model. It displays the fields of an object.
  *
  * @author Cay Horstmann
  * @version 1.06 2018-05-01

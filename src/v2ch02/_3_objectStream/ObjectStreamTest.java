@@ -20,12 +20,12 @@ class ObjectStreamTest {
         staff[1] = harry;
         staff[2] = tony;
 
-        // save all _4_employee records to the file _4_employee.dat
-        try (var out = new ObjectOutputStream(new FileOutputStream("_4_employee.dat"))) {
+        // save all employee records to the file employee.dat
+        try (var out = new ObjectOutputStream(new FileOutputStream("employee.dat"))) {
             out.writeObject(staff);
         }
 
-        try (var in = new ObjectInputStream(new FileInputStream("_4_employee.dat"))) {
+        try (var in = new ObjectInputStream(new FileInputStream("employee.dat"))) {
             // retrieve all records into a new array
 
             var newStaff = (Employee[]) in.readObject();
@@ -33,7 +33,7 @@ class ObjectStreamTest {
             // raise secretary's salary
             newStaff[1].raiseSalary(10);
 
-            // _15_print the newly _2_read _4_employee records
+            // print the newly read employee records
             for (Employee e : newStaff)
                 System.out.println(e);
         }

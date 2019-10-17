@@ -28,12 +28,12 @@ class SizedFrame extends JFrame {
         int screenHeight = screenSize.height;
         int screenWidth = screenSize.width;
 
-        // _2_set frame width, height and let platform pick screen location
+        // set frame width, height and let platform pick screen location
 
         setSize(screenWidth / 2, screenHeight / 2);
         setLocationByPlatform(true);
 
-        // _2_set frame icon
+        // set frame icon
 
         Image img = new ImageIcon("icon.gif").getImage();
         setIconImage(img);

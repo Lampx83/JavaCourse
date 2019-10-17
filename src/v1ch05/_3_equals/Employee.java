@@ -31,23 +31,23 @@ public class Employee {
         salary += raise;
     }
 
-    public boolean equals(Object otherObject) {
-        // a quick _1_test to see if the objects are identical
-        if (this == otherObject) return true;
-
-        // must return false if the explicit parameter is null
-        if (otherObject == null) return false;
-
-        // if the classes don't match, they can't be equal
-        if (getClass() != otherObject.getClass()) return false;
-
-        // now we know otherObject is a non-null Employee
-        var other = (Employee) otherObject;
-
-        // _1_test whether the fields have identical values
-        return Objects.equals(name, other.name)
-                && salary == other.salary && Objects.equals(hireDay, other.hireDay);
-    }
+//    public boolean equals(Object otherObject) {
+//        // a quick test to see if the objects are identical
+//        if (this == otherObject) return true;
+//
+//        // must return false if the explicit parameter is null
+//        if (otherObject == null) return false;
+//
+//        // if the classes don't match, they can't be equal
+//        if (getClass() != otherObject.getClass()) return false;
+//
+//        // now we know otherObject is a non-null Employee
+//        var other = (Employee) otherObject;
+//
+//        // test whether the fields have identical values
+//        return Objects.equals(name, other.name)
+//                && salary == other.salary && Objects.equals(hireDay, other.hireDay);
+//    }
 
     public int hashCode() {
         return Objects.hash(name, salary, hireDay);

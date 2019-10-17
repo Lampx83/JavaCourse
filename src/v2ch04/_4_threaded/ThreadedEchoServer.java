@@ -7,8 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * This program implements a multithreaded _3_server that listens to port 8189 and echoes back
- * all _8_client input.
+ * This program implements a multithreaded server that listens to port 8189 and echoes back
+ * all client input.
  *
  * @author Cay Horstmann
  * @version 1.23 2018-03-17
@@ -33,7 +33,7 @@ public class ThreadedEchoServer {
 }
 
 /**
- * This class handles the _8_client input for one _3_server _1_socket connection.
+ * This class handles the client input for one server socket connection.
  */
 class ThreadedEchoHandler implements Runnable {
     private Socket incoming;
@@ -41,7 +41,7 @@ class ThreadedEchoHandler implements Runnable {
     /**
      * Constructs a handler.
      *
-     * @param incomingSocket the incoming _1_socket
+     * @param incomingSocket the incoming socket
      */
     public ThreadedEchoHandler(Socket incomingSocket) {
         incoming = incomingSocket;
@@ -56,7 +56,7 @@ class ThreadedEchoHandler implements Runnable {
                      true /* autoFlush */)) {
             out.println("Hello! Enter BYE to exit.");
 
-            // echo _8_client input
+            // echo client input
             var done = false;
             while (!done && in.hasNextLine()) {
                 String line = in.nextLine();

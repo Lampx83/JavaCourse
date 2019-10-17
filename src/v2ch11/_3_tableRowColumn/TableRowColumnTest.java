@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates how to work with rows and columns in a _1_table.
+ * This program demonstrates how to work with rows and columns in a table.
  *
  * @author Cay Horstmann
  * @version 1.23 2018-05-01

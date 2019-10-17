@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * This program demonstrates the Callable interface and _6_executors.
+ * This program demonstrates the Callable interface and executors.
  *
  * @author Cay Horstmann
  * @version 1.0 2018-01-04
@@ -37,7 +37,7 @@ public class ExecutorDemo {
      * Returns all descendants of a given directory--see Chapters 1 and 2 of Volume II.
      *
      * @param rootDir the root directory
-     * @return a _2_set of all descendants of the root directory
+     * @return a set of all descendants of the root directory
      */
     public static Set<Path> descendants(Path rootDir) throws IOException {
         try (Stream<Path> entries = Files.walk(rootDir)) {
@@ -83,7 +83,7 @@ public class ExecutorDemo {
                 tasks.add(task);
             }
             ExecutorService executor = Executors.newCachedThreadPool();
-            // use a single thread executor instead to see if multiple _1_threads
+            // use a single thread executor instead to see if multiple threads
             // speed up the search
             // ExecutorService executor = Executors.newSingleThreadExecutor();
 

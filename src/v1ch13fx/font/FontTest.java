@@ -49,7 +49,7 @@ public class FontTest extends Application {
         baseline.setStroke(Color.GRAY);
 
         // Center image directly below the message
-        ImageView image = new ImageView("_4_font/world.png");
+        ImageView image = new ImageView("font/world.png");
         Bounds imageBounds = image.getBoundsInParent();
         image.relocate((PREFERRED_WIDTH - imageBounds.getWidth()) / 2,
                 baseY + descent);

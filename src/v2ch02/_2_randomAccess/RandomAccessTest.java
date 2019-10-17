@@ -15,37 +15,37 @@ public class RandomAccessTest {
         staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
         staff[2] = new Employee("Tony Tester", 40000, 1990, 3, 15);
 
-        try (var out = new DataOutputStream(new FileOutputStream("_4_employee.dat"))) {
-            // save all _4_employee records to the file _4_employee.dat
+        try (var out = new DataOutputStream(new FileOutputStream("employee.dat"))) {
+            // save all employee records to the file employee.dat
             for (Employee e : staff)
                 writeData(out, e);
         }
 
-        try (var in = new RandomAccessFile("_4_employee.dat", "r")) {
+        try (var in = new RandomAccessFile("employee.dat", "r")) {
             // retrieve all records into a new array
 
             // compute the array size
             int n = (int) (in.length() / Employee.RECORD_SIZE);
             var newStaff = new Employee[n];
 
-            // _2_read employees in reverse order
+            // read employees in reverse order
             for (int i = n - 1; i >= 0; i--) {
                 newStaff[i] = new Employee();
                 in.seek(i * Employee.RECORD_SIZE);
                 newStaff[i] = readData(in);
             }
 
-            // _15_print the newly _2_read _4_employee records
+            // print the newly read employee records
             for (Employee e : newStaff)
                 System.out.println(e);
         }
     }
 
     /**
-     * Writes _4_employee data to a data output
+     * Writes employee data to a data output
      *
      * @param out the data output
-     * @param e   the _4_employee
+     * @param e   the employee
      */
     public static void writeData(DataOutput out, Employee e) throws IOException {
         DataIO.writeFixedString(e.getName(), Employee.NAME_SIZE, out);
@@ -58,10 +58,10 @@ public class RandomAccessTest {
     }
 
     /**
-     * Reads _4_employee data from a data input
+     * Reads employee data from a data input
      *
      * @param in the data input
-     * @return the _4_employee
+     * @return the employee
      */
     public static Employee readData(DataInput in) throws IOException {
         String name = DataIO.readFixedString(Employee.NAME_SIZE, in);

@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * This program displays an XML document as a _5_tree in JSON format.
+ * This program displays an XML document as a tree in JSON format.
  *
  * @author Cay Horstmann
  * @version 1.2 2018-04-02

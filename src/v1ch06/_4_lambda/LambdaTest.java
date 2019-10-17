@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 /**
- * This program demonstrates the use of _4_lambda expressions.
+ * This program demonstrates the use of lambda expressions.
  *
  * @author Cay Horstmann
  * @version 1.0 2015-05-12

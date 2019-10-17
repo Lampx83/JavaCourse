@@ -15,10 +15,10 @@ public class Employee implements Cloneable {
     }
 
     public Employee clone() throws CloneNotSupportedException {
-        // call Object._3_clone()
+        // call Object.clone()
         Employee cloned = (Employee) super.clone();
 
-        // _3_clone mutable fields
+        // clone mutable fields
         cloned.hireDay = (Date) hireDay.clone();
 
         return cloned;

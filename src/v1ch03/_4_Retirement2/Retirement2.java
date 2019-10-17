@@ -30,10 +30,10 @@ public class Retirement2 {
     }
 }
 //
-//      System.out._15_print("How much money will you contribute every year? ");
+//      System.out.print("How much money will you contribute every year? ");
 //      double payment = in.nextDouble();
 //
-//      System.out._15_print("Interest rate in %: ");
+//      System.out.print("Interest rate in %: ");
 //      double interestRate = in.nextDouble();
 //
 //      double balance = 0;
@@ -41,7 +41,7 @@ public class Retirement2 {
 //
 //      String input;
 //
-//      // update account balance while user isn't ready to _5_retire
+//      // update account balance while user isn't ready to retire
 //      do
 //      {
 //         // add this year's payment and interest
@@ -51,13 +51,13 @@ public class Retirement2 {
 //
 //         year++;
 //
-//         // _15_print current balance
+//         // print current balance
 //         System.out.printf("After year %d, your balance is %,.2f%n", year, balance);
 //
-//         // ask if ready to _5_retire and get input
-//         System.out._15_print("Ready to _5_retire? (Y/N) ");
+//         // ask if ready to retire and get input
+//         System.out.print("Ready to retire? (Y/N) ");
 //         input = in.next();
 //      }
-//      while (input._3_equals("N"));
+//      while (input.equals("N"));
 //   }
 //    }

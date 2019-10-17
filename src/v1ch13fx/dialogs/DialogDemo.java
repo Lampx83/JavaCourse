@@ -103,7 +103,7 @@ public class DialogDemo extends Application {
         {
             ChoiceDialog<String> dialog = new ChoiceDialog<>("System",
                     Font.getFamilies());
-            dialog.setHeaderText("Pick a _4_font.");
+            dialog.setHeaderText("Pick a font.");
             dialog.showAndWait().ifPresentOrElse(
                     result -> textArea.appendText("Selected: " + result + "\n"),
                     () -> textArea.appendText("Canceled\n"));
@@ -113,7 +113,7 @@ public class DialogDemo extends Application {
         fileChooser.setOnAction(event ->
         {
             FileChooser dialog = new FileChooser();
-            dialog.setInitialDirectory(new File("_6_menu"));
+            dialog.setInitialDirectory(new File("menu"));
             dialog.setInitialFileName("untitled.gif");
             dialog.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("GIF images", "*.gif"),

@@ -80,7 +80,7 @@ public class QueryTest {
     }
 
     /**
-     * Executes the selected _3_query.
+     * Executes the selected query.
      *
      * @param conn the database connection
      */

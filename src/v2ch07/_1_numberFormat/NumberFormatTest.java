@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.Locale;
 
 /**
- * This program demonstrates _4_formatting numbers under various locales.
+ * This program demonstrates formatting numbers under various locales.
  *
  * @author Cay Horstmann
  * @version 1.15 2018-05-01
@@ -29,7 +29,7 @@ public class NumberFormatTest {
 
 /**
  * This frame contains radio buttons to select a number format, a combo box to pick a locale,
- * a _1_text field to display a formatted number, and a _5_button to parse the _1_text field contents.
+ * a text field to display a formatted number, and a button to parse the text field contents.
  */
 class NumberFormatFrame extends JFrame {
     private Locale[] locales;
@@ -83,12 +83,12 @@ class NumberFormatFrame extends JFrame {
     }
 
     /**
-     * Adds a radio _5_button to a container.
+     * Adds a radio button to a container.
      *
-     * @param p        the container into which to place the _5_button
-     * @param b        the _5_button
-     * @param g        the _5_button group
-     * @param listener the _5_button listener
+     * @param p        the container into which to place the button
+     * @param b        the button
+     * @param g        the button group
+     * @param listener the button listener
      */
     public void addRadioButton(Container p, JRadioButton b, ButtonGroup g,
                                ActionListener listener) {

@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * This program demonstrates how to use a SAX parser. The program prints all
  * hyperlinks of an XHTML web page. <br>
- * Usage: java _4_sax.SAXTest URL
+ * Usage: java sax.SAXTest URL
  *
  * @author Cay Horstmann
  * @version 1.01 2018-05-01

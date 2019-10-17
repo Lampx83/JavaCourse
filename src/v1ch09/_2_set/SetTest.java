@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
- * This program uses a _2_set to _15_print all unique words in System.in.
+ * This program uses a set to print all unique words in System.in.
  *
  * @author Cay Horstmann
  * @version 1.12 2015-06-21

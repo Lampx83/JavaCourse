@@ -7,7 +7,7 @@ import java.awt.image.ColorModel;
 import java.awt.image.WritableRaster;
 
 /**
- * This frame shows an image with a Mandelbrot _2_set.
+ * This frame shows an image with a Mandelbrot set.
  */
 public class RasterImageFrame extends JFrame {
     private static final double XMIN = -2;

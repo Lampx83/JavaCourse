@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
- * A frame with a toolbar and _6_menu for color changes.
+ * A frame with a toolbar and menu for color changes.
  */
 public class ToolBarFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
@@ -20,7 +20,7 @@ public class ToolBarFrame extends JFrame {
         panel = new JPanel();
         add(panel, BorderLayout.CENTER);
 
-        // _2_set up actions
+        // set up actions
 
         var blueAction = new ColorAction("Blue", new ImageIcon("blue-ball.gif"), Color.BLUE);
         var yellowAction = new ColorAction("Yellow", new ImageIcon("yellow-ball.gif"),
@@ -44,7 +44,7 @@ public class ToolBarFrame extends JFrame {
         bar.add(exitAction);
         add(bar, BorderLayout.NORTH);
 
-        // populate _6_menu
+        // populate menu
 
         var menu = new JMenu("Color");
         menu.add(yellowAction);

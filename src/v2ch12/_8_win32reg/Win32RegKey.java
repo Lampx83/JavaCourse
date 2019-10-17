@@ -3,7 +3,7 @@ package v2ch12._8_win32reg;
 import java.util.Enumeration;
 
 /**
- * A Win32RegKey object can be used to get and _2_set values of a registry key in the Windows
+ * A Win32RegKey object can be used to get and set values of a registry key in the Windows
  * registry.
  *
  * @author Cay Horstmann

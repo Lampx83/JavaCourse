@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class GenericReflectionTest {
     public static void main(String[] args) {
-        // _2_read class name from command line args or user input
+        // read class name from command line args or user input
         String name;
         if (args.length > 0) name = args[0];
         else {
@@ -21,7 +21,7 @@ public class GenericReflectionTest {
         }
 
         try {
-            // _15_print generic info for class and public methods
+            // print generic info for class and public methods
             Class<?> cl = Class.forName(name);
             printClass(cl);
             for (Method m : cl.getDeclaredMethods())

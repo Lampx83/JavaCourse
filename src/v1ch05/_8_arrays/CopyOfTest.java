@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
- * This program demonstrates the use of _7_reflection for manipulating _8_arrays.
+ * This program demonstrates the use of reflection for manipulating arrays.
  *
  * @author Cay Horstmann
  * @version 1.2 2012-05-04

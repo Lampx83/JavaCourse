@@ -95,7 +95,7 @@ public class HttpClientTest {
     public static void main(String[] args)
             throws IOException, URISyntaxException, InterruptedException {
         System.setProperty("jdk.httpclient.HttpClient.log", "headers,errors");
-        String propsFilename = args.length > 0 ? args[0] : "_8_client/_7_post.properties";
+        String propsFilename = args.length > 0 ? args[0] : "client/post.properties";
         Path propsPath = Paths.get(propsFilename);
         var props = new Properties();
         try (InputStream in = Files.newInputStream(propsPath)) {

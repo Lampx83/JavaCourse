@@ -13,7 +13,7 @@ import java.util.zip.CRC32;
 
 /**
  * This program computes the CRC checksum of a file in four ways. <br>
- * Usage: java _5_memoryMap.MemoryMapTest filename
+ * Usage: java memoryMap.MemoryMapTest filename
  *
  * @author Cay Horstmann
  * @version 1.02 2018-05-01

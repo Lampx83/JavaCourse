@@ -74,9 +74,9 @@ class ExecSQL {
     }
 
     /**
-     * Prints a result _2_set.
+     * Prints a result set.
      *
-     * @param result the result _2_set to be printed
+     * @param result the result set to be printed
      */
     public static void showResultSet(ResultSet result) throws SQLException {
         ResultSetMetaData metaData = result.getMetaData();

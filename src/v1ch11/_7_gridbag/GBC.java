@@ -11,7 +11,7 @@ import java.awt.*;
 public class GBC extends GridBagConstraints {
     /**
      * Constructs a GBC with a given gridx and gridy position and all other grid
-     * bag constraint values _2_set to the default.
+     * bag constraint values set to the default.
      *
      * @param gridx the gridx position
      * @param gridy the gridy position
@@ -23,7 +23,7 @@ public class GBC extends GridBagConstraints {
 
     /**
      * Constructs a GBC with given gridx, gridy, gridwidth, gridheight and all
-     * other grid bag constraint values _2_set to the default.
+     * other grid bag constraint values set to the default.
      *
      * @param gridx      the gridx position
      * @param gridy      the gridy position

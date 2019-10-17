@@ -16,7 +16,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program; if not, _6_write to the Free Software
+along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
@@ -29,7 +29,7 @@ import java.awt.*;
 public class GBC extends GridBagConstraints {
     /**
      * Constructs a GBC with a given gridx and gridy position and
-     * all other grid bag constraint values _2_set to the default.
+     * all other grid bag constraint values set to the default.
      *
      * @param gridx the gridx position
      * @param gridy the gridy position
@@ -41,7 +41,7 @@ public class GBC extends GridBagConstraints {
 
     /**
      * Constructs a GBC with given gridx, gridy, gridwidth, gridheight
-     * and all other grid bag constraint values _2_set to the default.
+     * and all other grid bag constraint values set to the default.
      *
      * @param gridx      the gridx position
      * @param gridy      the gridy position

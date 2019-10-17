@@ -27,7 +27,7 @@ public class ShapeTest {
 }
 
 /**
- * This frame contains a combo box to select a _9_shape and a component to _3_draw it.
+ * This frame contains a combo box to select a shape and a component to draw it.
  */
 class ShapeTestFrame extends JFrame {
     public ShapeTestFrame() {
@@ -54,7 +54,7 @@ class ShapeTestFrame extends JFrame {
 }
 
 /**
- * This component draws a _9_shape and allows the user to move the points that define it.
+ * This component draws a shape and allows the user to move the points that define it.
  */
 class ShapeComponent extends JComponent {
     private static final Dimension PREFERRED_SIZE = new Dimension(300, 200);
@@ -94,9 +94,9 @@ class ShapeComponent extends JComponent {
     }
 
     /**
-     * Set a _9_shape maker and initialize it with a random point _2_set.
+     * Set a shape maker and initialize it with a random point set.
      *
-     * @param aShapeMaker a _9_shape maker that defines a _9_shape from a point _2_set
+     * @param aShapeMaker a shape maker that defines a shape from a point set
      */
     public void setShapeMaker(ShapeMaker aShapeMaker) {
         shapeMaker = aShapeMaker;
@@ -128,23 +128,23 @@ class ShapeComponent extends JComponent {
 }
 
 /**
- * A _9_shape maker can make a _9_shape from a point _2_set. Concrete subclasses must return a _9_shape in
+ * A shape maker can make a shape from a point set. Concrete subclasses must return a shape in
  * the makeShape method.
  */
 abstract class ShapeMaker {
     private int pointCount;
 
     /**
-     * Constructs a _9_shape maker.
+     * Constructs a shape maker.
      *
-     * @param ointCount the number of points needed to define this _9_shape
+     * @param ointCount the number of points needed to define this shape
      */
     public ShapeMaker(int pointCount) {
         this.pointCount = pointCount;
     }
 
     /**
-     * Gets the number of points needed to define this _9_shape.
+     * Gets the number of points needed to define this shape.
      *
      * @return the point count
      */
@@ -153,10 +153,10 @@ abstract class ShapeMaker {
     }
 
     /**
-     * Makes a _9_shape out of the given point _2_set.
+     * Makes a shape out of the given point set.
      *
-     * @param p the points that define the _9_shape
-     * @return the _9_shape defined by the points
+     * @param p the points that define the shape
+     * @return the shape defined by the points
      */
     public abstract Shape makeShape(Point2D[] p);
 
@@ -226,7 +226,7 @@ class EllipseMaker extends ShapeMaker {
 /**
  * Makes an arc contained in a bounding box with two given corner points, and with starting
  * and ending angles given by lines emanating from the center of the bounding box and ending
- * in two given points. To show the correctness of the angle computation, the returned _9_shape
+ * in two given points. To show the correctness of the angle computation, the returned shape
  * contains the arc, the bounding box, and the lines.
  */
 class ArcMaker extends ShapeMaker {

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program demonstrates cell rendering and listening to _5_tree selection events.
+ * This program demonstrates cell rendering and listening to tree selection events.
  *
  * @author Cay Horstmann
  * @version 1.05 2018-05-01

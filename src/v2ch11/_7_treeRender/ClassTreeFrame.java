@@ -9,8 +9,8 @@ import java.lang.reflect.Modifier;
 import java.util.Enumeration;
 
 /**
- * This frame displays the class _5_tree, a _1_text field, and an "Add" _5_button to add more classes
- * into the _5_tree.
+ * This frame displays the class tree, a text field, and an "Add" button to add more classes
+ * into the tree.
  */
 public class ClassTreeFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 400;
@@ -25,22 +25,22 @@ public class ClassTreeFrame extends JFrame {
     public ClassTreeFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // the root of the class _5_tree is Object
+        // the root of the class tree is Object
         root = new DefaultMutableTreeNode(Object.class);
         model = new DefaultTreeModel(root);
         tree = new JTree(model);
 
-        // add this class to populate the _5_tree with some data
+        // add this class to populate the tree with some data
         addClass(getClass());
 
-        // _2_set up node icons
+        // set up node icons
         var renderer = new ClassNameTreeCellRenderer();
         renderer.setClosedIcon(new ImageIcon(getClass().getResource("red-ball.gif")));
         renderer.setOpenIcon(new ImageIcon(getClass().getResource("yellow-ball.gif")));
         renderer.setLeafIcon(new ImageIcon(getClass().getResource("blue-ball.gif")));
         tree.setCellRenderer(renderer);
 
-        // _2_set up selection mode
+        // set up selection mode
         tree.addTreeSelectionListener(event ->
         {
             // the user selected a different node--update description
@@ -54,10 +54,10 @@ public class ClassTreeFrame extends JFrame {
         int mode = TreeSelectionModel.SINGLE_TREE_SELECTION;
         tree.getSelectionModel().setSelectionMode(mode);
 
-        // this _1_text area holds the class description
+        // this text area holds the class description
         textArea = new JTextArea();
 
-        // add _5_tree and _1_text area
+        // add tree and text area
         var panel = new JPanel();
         panel.setLayout(new GridLayout(1, 2));
         panel.add(new JScrollPane(tree));
@@ -69,24 +69,24 @@ public class ClassTreeFrame extends JFrame {
     }
 
     /**
-     * Add the _1_text field and "Add" _5_button to add a new class.
+     * Add the text field and "Add" button to add a new class.
      */
     public void addTextField() {
         var panel = new JPanel();
 
         ActionListener addListener = event ->
         {
-            // add the class whose name is in the _1_text field
+            // add the class whose name is in the text field
             try {
                 String text = textField.getText();
-                addClass(Class.forName(text)); // clear _1_text field to indicate success
+                addClass(Class.forName(text)); // clear text field to indicate success
                 textField.setText("");
             } catch (ClassNotFoundException e) {
                 JOptionPane.showMessageDialog(null, "Class not found");
             }
         };
 
-        // new class names are typed into this _1_text field
+        // new class names are typed into this text field
         textField = new JTextField(20);
         textField.addActionListener(addListener);
         panel.add(textField);
@@ -99,10 +99,10 @@ public class ClassTreeFrame extends JFrame {
     }
 
     /**
-     * Finds an object in the _5_tree.
+     * Finds an object in the tree.
      *
      * @param obj the object to find
-     * @return the node containing the object or null if the object is not present in the _5_tree
+     * @return the node containing the object or null if the object is not present in the tree
      */
     public DefaultMutableTreeNode findUserObject(Object obj) {
         // find the node containing a user object
@@ -115,18 +115,18 @@ public class ClassTreeFrame extends JFrame {
     }
 
     /**
-     * Adds a new class and any parent classes that aren't yet part of the _5_tree.
+     * Adds a new class and any parent classes that aren't yet part of the tree.
      *
      * @param c the class to add
      * @return the newly added node
      */
     public DefaultMutableTreeNode addClass(Class<?> c) {
-        // add a new class to the _5_tree
+        // add a new class to the tree
 
         // skip non-class types
         if (c.isInterface() || c.isPrimitive()) return null;
 
-        // if the class is already in the _5_tree, return its node
+        // if the class is already in the tree, return its node
         DefaultMutableTreeNode node = findUserObject(c);
         if (node != null) return node;
 

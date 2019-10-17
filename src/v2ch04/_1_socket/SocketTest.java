@@ -6,8 +6,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * This program makes a _1_socket connection to the atomic clock in Boulder, Colorado, and prints
- * the time that the _3_server sends.
+ * This program makes a socket connection to the atomic clock in Boulder, Colorado, and prints
+ * the time that the server sends.
  *
  * @author Cay Horstmann
  * @version 1.22 2018-03-17

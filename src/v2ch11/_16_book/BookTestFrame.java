@@ -10,8 +10,8 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 
 /**
- * This frame has a _1_text field for the banner _1_text and buttons for printing, page setup, and
- * _15_print preview.
+ * This frame has a text field for the banner text and buttons for printing, page setup, and
+ * print preview.
  */
 public class BookTestFrame extends JFrame {
     private JTextField text;
@@ -62,7 +62,7 @@ public class BookTestFrame extends JFrame {
     }
 
     /**
-     * Makes a _16_book that contains a cover page and the pages for the banner.
+     * Makes a book that contains a cover page and the pages for the banner.
      */
     public Book makeBook() {
         if (pageFormat == null) {

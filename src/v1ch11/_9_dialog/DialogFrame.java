@@ -3,7 +3,7 @@ package v1ch11._9_dialog;
 import javax.swing.*;
 
 /**
- * A frame with a _6_menu whose File->About action shows a _9_dialog.
+ * A frame with a menu whose File->About action shows a dialog.
  */
 public class DialogFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
@@ -13,22 +13,22 @@ public class DialogFrame extends JFrame {
     public DialogFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // construct a File _6_menu
+        // construct a File menu
 
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);
         var fileMenu = new JMenu("File");
         menuBar.add(fileMenu);
 
-        // add About and Exit _6_menu items
+        // add About and Exit menu items
 
-        // the About item shows the About _9_dialog
+        // the About item shows the About dialog
 
         var aboutItem = new JMenuItem("About");
         aboutItem.addActionListener(event -> {
             if (dialog == null) // first time
                 dialog = new AboutDialog(DialogFrame.this);
-            dialog.setVisible(true); // pop up _9_dialog
+            dialog.setVisible(true); // pop up dialog
         });
         fileMenu.add(aboutItem);
 

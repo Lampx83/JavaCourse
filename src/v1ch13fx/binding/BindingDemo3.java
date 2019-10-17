@@ -36,11 +36,11 @@ public class BindingDemo3 extends Application {
         smaller.disableProperty().bind(
                 lessThanOrEqual(gauge.widthProperty(), 0));
 
-        // Creating a binding from a _4_lambda
+        // Creating a binding from a lambda
 
         larger.disableProperty().bind(
                 createBooleanBinding(
-                        () -> gauge.getWidth() >= 100, // This _4_lambda is computed ...
+                        () -> gauge.getWidth() >= 100, // This lambda is computed ...
                         gauge.widthProperty())); // ... when this property changes
 
         Scene scene = new Scene(new HBox(10, smaller, pane, larger));

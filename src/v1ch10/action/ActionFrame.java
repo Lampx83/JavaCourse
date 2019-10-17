@@ -48,8 +48,8 @@ public class ActionFrame extends JFrame {
         /**
          * Constructs a color action.
          *
-         * @param name the name to show on the _5_button
-         * @param icon the icon to display on the _5_button
+         * @param name the name to show on the button
+         * @param icon the icon to display on the button
          * @param c    the background color
          */
         public ColorAction(String name, Icon icon, Color c) {

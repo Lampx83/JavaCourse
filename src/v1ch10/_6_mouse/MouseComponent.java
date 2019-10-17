@@ -10,7 +10,7 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
 /**
- * A component with _6_mouse operations for adding and removing squares.
+ * A component with mouse operations for adding and removing squares.
  */
 public class MouseComponent extends JComponent {
     private static final int DEFAULT_WIDTH = 300;
@@ -18,7 +18,7 @@ public class MouseComponent extends JComponent {
 
     private static final int SIDELENGTH = 10;
     private ArrayList<Rectangle2D> squares;
-    private Rectangle2D current; // the square containing the _6_mouse cursor
+    private Rectangle2D current; // the square containing the mouse cursor
 
     public MouseComponent() {
         squares = new ArrayList<>();
@@ -35,7 +35,7 @@ public class MouseComponent extends JComponent {
     public void paintComponent(Graphics g) {
         var g2 = (Graphics2D) g;
 
-        // _3_draw all squares
+        // draw all squares
         for (Rectangle2D r : squares)
             g2.draw(r);
     }
@@ -96,7 +96,7 @@ public class MouseComponent extends JComponent {
 
     private class MouseMotionHandler implements MouseMotionListener {
         public void mouseMoved(MouseEvent event) {
-            // _2_set the _6_mouse cursor to cross hairs if it is inside a rectangle
+            // set the mouse cursor to cross hairs if it is inside a rectangle
 
             if (find(event.getPoint()) == null) setCursor(Cursor.getDefaultCursor());
             else setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));

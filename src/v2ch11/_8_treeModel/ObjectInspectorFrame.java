@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This frame holds the object _5_tree.
+ * This frame holds the object tree.
  */
 public class ObjectInspectorFrame extends JFrame {
     private JTree tree;
@@ -20,7 +20,7 @@ public class ObjectInspectorFrame extends JFrame {
         var model = new ObjectTreeModel();
         model.setRoot(v);
 
-        // construct and show _5_tree
+        // construct and show tree
 
         tree = new JTree(model);
         add(new JScrollPane(tree), BorderLayout.CENTER);

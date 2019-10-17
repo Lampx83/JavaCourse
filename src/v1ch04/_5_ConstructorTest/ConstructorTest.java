@@ -17,7 +17,7 @@ public class ConstructorTest {
         staff[1] = new Employee(60000);
         staff[2] = new Employee();
 
-        // _15_print out information about all Employee objects
+        // print out information about all Employee objects
         for (Employee e : staff)
             System.out.println("name=" + e.getName() + ",id=" + e.getId() + ",salary="
                     + e.getSalary());
@@ -34,7 +34,7 @@ class Employee {
     // static initialization block
     static {
         var generator = new Random();
-        // _2_set nextId to a random number between 0 and 9999
+        // set nextId to a random number between 0 and 9999
         nextId = generator.nextInt(10000);
     }
 
@@ -58,7 +58,7 @@ class Employee {
     // the default constructor
     public Employee() {
         // name initialized to ""--see above
-        // salary not explicitly _2_set--initialized to 0
+        // salary not explicitly set--initialized to 0
         // id initialized in initialization block
     }
 

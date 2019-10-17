@@ -4,7 +4,7 @@ import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
- * This frame contains a simple _5_tree that displays a manually constructed _5_tree model.
+ * This frame contains a simple tree that displays a manually constructed tree model.
  */
 public class SimpleTreeFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
@@ -13,7 +13,7 @@ public class SimpleTreeFrame extends JFrame {
     public SimpleTreeFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // _2_set up _5_tree model data
+        // set up tree model data
 
         var root = new DefaultMutableTreeNode("World");
         var country = new DefaultMutableTreeNode("USA");
@@ -35,7 +35,7 @@ public class SimpleTreeFrame extends JFrame {
         city = new DefaultMutableTreeNode("Kiel");
         state.add(city);
 
-        // construct _5_tree and put it in a scroll pane
+        // construct tree and put it in a scroll pane
 
         var tree = new JTree(root);
         add(new JScrollPane(tree));

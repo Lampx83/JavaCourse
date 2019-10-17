@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
- * This program shows how to interrupt a _1_socket channel.
+ * This program shows how to interrupt a socket channel.
  *
  * @author Cay Horstmann
  * @version 1.05 2018-03-17
@@ -101,7 +101,7 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     /**
-     * Connects to the _1_test _3_server, using _5_interruptible I/O
+     * Connects to the test server, using interruptible I/O
      */
     public void connectInterruptibly() throws IOException {
         messages.append("Interruptible:\n");
@@ -127,7 +127,7 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     /**
-     * Connects to the _1_test _3_server, using blocking I/O
+     * Connects to the test server, using blocking I/O
      */
     public void connectBlocking() throws IOException {
         messages.append("Blocking:\n");
@@ -152,8 +152,8 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     /**
-     * A multithreaded _3_server that listens to port 8189 and sends numbers to the _8_client,
-     * simulating a hanging _3_server after 10 numbers.
+     * A multithreaded server that listens to port 8189 and sends numbers to the client,
+     * simulating a hanging server after 10 numbers.
      */
     class TestServer implements Runnable {
         public void run() {
@@ -170,7 +170,7 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     /**
-     * This class handles the _8_client input for one _3_server _1_socket connection.
+     * This class handles the client input for one server socket connection.
      */
     class TestServerHandler implements Runnable {
         private Socket incoming;
@@ -179,7 +179,7 @@ class InterruptibleSocketFrame extends JFrame {
         /**
          * Constructs a handler.
          *
-         * @param i the incoming _1_socket
+         * @param i the incoming socket
          */
         public TestServerHandler(Socket i) {
             incoming = i;
@@ -199,7 +199,7 @@ class InterruptibleSocketFrame extends JFrame {
                     }
                 } finally {
                     incoming.close();
-                    messages.append("Closing _3_server\n");
+                    messages.append("Closing server\n");
                 }
             } catch (Exception e) {
                 messages.append("\nTestServerHandler.run: " + e);

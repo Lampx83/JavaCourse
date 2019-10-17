@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 import java.util.Scanner;
 
 /**
- * This program uses _7_reflection to _15_print all features of a class.
+ * This program uses reflection to print all features of a class.
  *
  * @author Cay Horstmann
  * @version 1.11 2018-03-16
@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class ReflectionTest {
     public static void main(String[] args)
             throws ReflectiveOperationException {
-        // _2_read class name from command line args or user input
+        // read class name from command line args or user input
         String name;
         if (args.length > 0) name = args[0];
         else {
@@ -24,7 +24,7 @@ public class ReflectionTest {
             name = in.next();
         }
 
-        // _15_print class name and superclass name (if != Object)
+        // print class name and superclass name (if != Object)
         Class cl = Class.forName(name);
         Class supercl = cl.getSuperclass();
         String modifiers = Modifier.toString(cl.getModifiers());
@@ -57,7 +57,7 @@ public class ReflectionTest {
             if (modifiers.length() > 0) System.out.print(modifiers + " ");
             System.out.print(name + "(");
 
-            // _15_print parameter types
+            // print parameter types
             Class[] paramTypes = c.getParameterTypes();
             for (int j = 0; j < paramTypes.length; j++) {
                 if (j > 0) System.out.print(", ");
@@ -68,7 +68,7 @@ public class ReflectionTest {
     }
 
     /**
-     * Prints all _9_methods of a class
+     * Prints all methods of a class
      *
      * @param cl a class
      */
@@ -80,12 +80,12 @@ public class ReflectionTest {
             String name = m.getName();
 
             System.out.print("   ");
-            // _15_print modifiers, return type and method name
+            // print modifiers, return type and method name
             String modifiers = Modifier.toString(m.getModifiers());
             if (modifiers.length() > 0) System.out.print(modifiers + " ");
             System.out.print(retType.getName() + " " + name + "(");
 
-            // _15_print parameter types
+            // print parameter types
             Class[] paramTypes = m.getParameterTypes();
             for (int j = 0; j < paramTypes.length; j++) {
                 if (j > 0) System.out.print(", ");

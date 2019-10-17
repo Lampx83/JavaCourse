@@ -24,8 +24,8 @@ public class TestDB {
     }
 
     /**
-     * Runs a _1_test by creating a _1_table, adding a value, showing the _1_table contents, and
-     * removing the _1_table.
+     * Runs a test by creating a table, adding a value, showing the table contents, and
+     * removing the table.
      */
     public static void runTest() throws SQLException, IOException {
         try (Connection conn = getConnection();

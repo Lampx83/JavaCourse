@@ -15,7 +15,7 @@ public class TimerTest {
     public static void main(String[] args) {
         var listener = new TimePrinter();
 
-        // construct a _2_timer that calls the listener
+        // construct a timer that calls the listener
         // once every second
         var timer = new Timer(1000, listener);
         timer.start();

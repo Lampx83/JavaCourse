@@ -119,7 +119,7 @@
         <!-- internationalization attributes
           lang        language code (backwards compatible)
           xml:lang    language code (as per XML 1.0 spec)
-          dir         direction for weak/neutral _1_text
+          dir         direction for weak/neutral text
         -->
         <!ENTITY % i18n
                 "lang        %LanguageCode; #IMPLIED
@@ -128,10 +128,10 @@
                 >
 
         <!-- attributes for common UI events
-          onclick     a pointer _5_button was clicked
-          ondblclick  a pointer _5_button was double clicked
-          onmousedown a pointer _5_button was pressed down
-          onmouseup   a pointer _5_button was released
+          onclick     a pointer button was clicked
+          ondblclick  a pointer button was double clicked
+          onmousedown a pointer button was pressed down
+          onmouseup   a pointer button was released
           onmousemove a pointer was moved onto the element
           onmouseout  a pointer was moved away from the element
           onkeypress  a key was pressed and released
@@ -190,7 +190,7 @@
 
         <!ENTITY % inline "a | %special; | %fontstyle; | %phrase; | %inline.forms;">
 
-        <!-- %Inline; covers inline or "_1_text-level" elements -->
+        <!-- %Inline; covers inline or "text-level" elements -->
         <!ENTITY % Inline "(#PCDATA | %inline; | %misc.inline;)*">
 
         <!--================== Block level elements ==============================-->
@@ -224,7 +224,7 @@
 
         <!ENTITY % form.content "(%block; | %misc;)*">
 
-        <!-- _5_button uses %Flow; but excludes a, form and form controls -->
+        <!-- button uses %Flow; but excludes a, form and form controls -->
 
         <!ENTITY % button.content
                 "(#PCDATA | p | %heading; | div | %lists; | %blocktext; |
@@ -246,7 +246,7 @@
         <!ENTITY % head.misc "(script|style|meta|link|object)*">
 
         <!-- content model is %head.misc; combined with a single
-             title and an _2_optional base element in any order -->
+             title and an optional base element in any order -->
 
         <!ELEMENT head (%head.misc;,
                 ((title, %head.misc;, (base, %head.misc;)?) |
@@ -258,7 +258,7 @@
                 profile     %URI;          #IMPLIED
                 >
 
-        <!-- The title element is not considered part of the flow of _1_text.
+        <!-- The title element is not considered part of the flow of text.
                It should be displayed, for example as the page header or
                window title. Exactly one title is required per document.
             -->
@@ -298,7 +298,7 @@
            d) by stylesheets to control how collections of
               html nodes are rendered into printed documents
            e) to make a link to a printable version of this document
-              e.g. a PostScript or PDF version (rel="alternate" media="_15_print")
+              e.g. a PostScript or PDF version (rel="alternate" media="print")
         -->
 
         <!ELEMENT link EMPTY>
@@ -577,19 +577,19 @@
         <!ELEMENT sup %Inline;> <!-- superscript -->
         <!ATTLIST sup %attrs;>
 
-        <!ELEMENT tt %Inline;>   <!-- fixed pitch _4_font -->
+        <!ELEMENT tt %Inline;>   <!-- fixed pitch font -->
         <!ATTLIST tt %attrs;>
 
-        <!ELEMENT i %Inline;>   <!-- italic _4_font -->
+        <!ELEMENT i %Inline;>   <!-- italic font -->
         <!ATTLIST i %attrs;>
 
-        <!ELEMENT b %Inline;>   <!-- bold _4_font -->
+        <!ELEMENT b %Inline;>   <!-- bold font -->
         <!ATTLIST b %attrs;>
 
-        <!ELEMENT big %Inline;>   <!-- bigger _4_font -->
+        <!ELEMENT big %Inline;>   <!-- bigger font -->
         <!ATTLIST big %attrs;>
 
-        <!ELEMENT small %Inline;>   <!-- smaller _4_font -->
+        <!ELEMENT small %Inline;>   <!-- smaller font -->
         <!ATTLIST small %attrs;>
 
         <!--==================== Object ======================================-->
@@ -637,9 +637,9 @@
 
         <!--
            To avoid accessibility problems for people who aren't
-           able to see the image, you should provide a _1_text
+           able to see the image, you should provide a text
            description using the alt and longdesc attributes.
-           In addition, avoid the use of _3_server-side image maps.
+           In addition, avoid the use of server-side image maps.
            Note that in this DTD there is no name attribute. That
            is only available in the transitional and frameset DTD.
         -->
@@ -656,7 +656,7 @@
                 ismap       (ismap)        #IMPLIED
                 >
 
-        <!-- usemap points to a _5_map element which may be in this document
+        <!-- usemap points to a map element which may be in this document
           or an external document, although the latter is not widely supported -->
 
         <!--================== Client-side image maps ============================-->
@@ -770,7 +770,7 @@
                 value       CDATA          #IMPLIED
                 >
 
-        <!ELEMENT textarea (#PCDATA)>     <!-- multi-line _1_text field -->
+        <!ELEMENT textarea (#PCDATA)>     <!-- multi-line text field -->
         <!ATTLIST textarea
                 %attrs;
                 %focus;
@@ -802,7 +802,7 @@
         <!--
          Content is %Flow; excluding a, form and form controls
         -->
-        <!ELEMENT button %button.content;>  <!-- push _5_button -->
+        <!ELEMENT button %button.content;>  <!-- push button -->
         <!ATTLIST button
                 %attrs;
                 %focus;
@@ -814,20 +814,20 @@
 
         <!--======================= Tables =======================================-->
 
-        <!-- Derived from IETF HTML _1_table standard, see [RFC1942] -->
+        <!-- Derived from IETF HTML table standard, see [RFC1942] -->
 
         <!--
          The border attribute sets the thickness of the frame around the
-         _1_table. The default units are screen pixels.
+         table. The default units are screen pixels.
 
          The frame attribute specifies which parts of the frame around
-         the _1_table should be rendered. The values are not the same as
+         the table should be rendered. The values are not the same as
          CALS to avoid a name clash with the valign attribute.
         -->
         <!ENTITY % TFrame "(void|above|below|hsides|lhs|rhs|vsides|box|border)">
 
         <!--
-         The rules attribute defines which rules to _3_draw between cells:
+         The rules attribute defines which rules to draw between cells:
 
          If rules is absent then assume:
              "none" if border is absent or border="0" otherwise "all"
@@ -879,7 +879,7 @@
                 >
 
         <!--
-        colgroup groups a _2_set of col elements. It allows you to group
+        colgroup groups a set of col elements. It allows you to group
         several semantically related columns together.
         -->
         <!ATTLIST colgroup
@@ -911,16 +911,16 @@
                 >
 
         <!--
-            Use thead to duplicate headers when breaking _1_table
+            Use thead to duplicate headers when breaking table
             across page boundaries, or for static headers when
             tbody sections are rendered in scrolling panel.
 
-            Use tfoot to duplicate footers when breaking _1_table
+            Use tfoot to duplicate footers when breaking table
             across page boundaries, or for static footers when
             tbody sections are rendered in scrolling panel.
 
             Use multiple tbody sections when rules are needed
-            between groups of _1_table rows.
+            between groups of table rows.
         -->
         <!ATTLIST thead
                 %attrs;

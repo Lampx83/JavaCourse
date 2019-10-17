@@ -90,12 +90,12 @@ public class CompletableFutureDemo {
                 .thenAccept(this::saveImages);
          
       /* 
-      // or use the experimental HTTP _8_client:
+      // or use the experimental HTTP client:
        
-      HttpClient _8_client = HttpClient.newBuilder().executor(executor).build();
+      HttpClient client = HttpClient.newBuilder().executor(executor).build();
       HttpRequest request = HttpRequest.newBuilder(urlToProcess.toURI()).GET()
          .build();
-      _8_client.sendAsync(request, BodyProcessor.asString())
+      client.sendAsync(request, BodyProcessor.asString())
          .thenApply(HttpResponse::body).thenApply(this::getImageURLs)
          .thenCompose(this::getImages).thenAccept(this::saveImages);
       */

@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 
 /**
- * This frame contains a _1_table of planet data.
+ * This frame contains a table of planet data.
  */
 public class PlanetTableFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 600;
@@ -78,7 +78,7 @@ public class PlanetTableFrame extends JFrame {
             }
         };
 
-        // create _6_menu
+        // create menu
 
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);
@@ -127,7 +127,7 @@ public class PlanetTableFrame extends JFrame {
             int[] selected = table.getSelectedColumns();
             TableColumnModel columnModel = table.getColumnModel();
 
-            // remove columns from _4_view, starting at the last
+            // remove columns from view, starting at the last
             // index so that column numbers aren't affected
 
             for (int i = selected.length - 1; i >= 0; i--) {

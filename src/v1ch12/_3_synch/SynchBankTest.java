@@ -1,7 +1,7 @@
 package v1ch12._3_synch;
 
 /**
- * This program shows how multiple _1_threads can safely access a data structure.
+ * This program shows how multiple threads can safely access a data structure.
  *
  * @author Cay Horstmann
  * @version 1.32 2018-04-10

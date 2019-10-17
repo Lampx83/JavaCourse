@@ -21,14 +21,14 @@ public class ClassNameTreeCellRenderer extends DefaultTreeCellRenderer {
         var node = (DefaultMutableTreeNode) value;
         Class<?> c = (Class<?>) node.getUserObject();
 
-        // the first time, derive italic _4_font from plain _4_font
+        // the first time, derive italic font from plain font
         if (plainFont == null) {
             plainFont = getFont();
-            // the _5_tree cell renderer is sometimes called with a label that has a null _4_font
+            // the tree cell renderer is sometimes called with a label that has a null font
             if (plainFont != null) italicFont = plainFont.deriveFont(Font.ITALIC);
         }
 
-        // _2_set _4_font to italic if the class is abstract, plain otherwise
+        // set font to italic if the class is abstract, plain otherwise
         if ((c.getModifiers() & Modifier.ABSTRACT) == 0) setFont(plainFont);
         else setFont(italicFont);
         return this;

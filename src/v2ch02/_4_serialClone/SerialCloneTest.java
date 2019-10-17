@@ -11,20 +11,20 @@ import java.time.LocalDate;
 public class SerialCloneTest {
     public static void main(String[] args) throws CloneNotSupportedException {
         var harry = new Employee("Harry Hacker", 35000, 1989, 10, 1);
-        // _3_clone harry
+        // clone harry
         var harry2 = (Employee) harry.clone();
 
         // mutate harry
         harry.raiseSalary(10);
 
-        // now harry and the _3_clone are different
+        // now harry and the clone are different
         System.out.println(harry);
         System.out.println(harry2);
     }
 }
 
 /**
- * A class whose _3_clone method uses serialization.
+ * A class whose clone method uses serialization.
  */
 class SerialCloneable implements Cloneable, Serializable {
     public Object clone() throws CloneNotSupportedException {
@@ -35,7 +35,7 @@ class SerialCloneable implements Cloneable, Serializable {
                 out.writeObject(this);
             }
 
-            // _2_read a _3_clone of the object from the byte array
+            // read a clone of the object from the byte array
             try (var bin = new ByteArrayInputStream(bout.toByteArray())) {
                 var in = new ObjectInputStream(bin);
                 return in.readObject();
@@ -76,7 +76,7 @@ class Employee extends SerialCloneable {
     }
 
     /**
-     * Raises the salary of this _4_employee.
+     * Raises the salary of this employee.
      *
      * @byPercent the percentage of the raise
      */

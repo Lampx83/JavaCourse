@@ -104,17 +104,17 @@ class ViewDBFrame extends JFrame {
     }
 
     /**
-     * Prepares the _1_text fields for showing a new _1_table, and shows the first row.
+     * Prepares the text fields for showing a new table, and shows the first row.
      *
-     * @param tableName the name of the _1_table to display
+     * @param tableName the name of the table to display
      * @param conn      the database connection
      */
     public void showTable(String tableName, Connection conn) {
         try (Statement stat = conn.createStatement();
              ResultSet result = stat.executeQuery("SELECT * FROM " + tableName)) {
-            // get result _2_set
+            // get result set
 
-            // copy into cached row _2_set
+            // copy into cached row set
             RowSetFactory factory = RowSetProvider.newFactory();
             crs = factory.createCachedRowSet();
             crs.setTableName(tableName);
@@ -133,7 +133,7 @@ class ViewDBFrame extends JFrame {
     }
 
     /**
-     * Moves to the previous _1_table row.
+     * Moves to the previous table row.
      */
     public void showPreviousRow() {
         try {
@@ -147,7 +147,7 @@ class ViewDBFrame extends JFrame {
     }
 
     /**
-     * Moves to the next _1_table row.
+     * Moves to the next table row.
      */
     public void showNextRow() {
         try {
@@ -161,7 +161,7 @@ class ViewDBFrame extends JFrame {
     }
 
     /**
-     * Deletes current _1_table row.
+     * Deletes current table row.
      */
     public void deleteRow() {
         if (crs == null) return;
@@ -218,7 +218,7 @@ class ViewDBFrame extends JFrame {
 }
 
 /**
- * This panel displays the contents of a result _2_set.
+ * This panel displays the contents of a result set.
  */
 class DataPanel extends JPanel {
     private java.util.List<JTextField> fields;
@@ -226,7 +226,7 @@ class DataPanel extends JPanel {
     /**
      * Constructs the data panel.
      *
-     * @param rs the result _2_set whose contents this panel displays
+     * @param rs the result set whose contents this panel displays
      */
     public DataPanel(RowSet rs) throws SQLException {
         fields = new ArrayList<>();
@@ -258,7 +258,7 @@ class DataPanel extends JPanel {
     }
 
     /**
-     * Shows a database row by populating all _1_text fields with the column values.
+     * Shows a database row by populating all text fields with the column values.
      */
     public void showRow(ResultSet rs) {
         try {
@@ -275,7 +275,7 @@ class DataPanel extends JPanel {
     }
 
     /**
-     * Updates changed data into the current row of the row _2_set.
+     * Updates changed data into the current row of the row set.
      */
     public void setRow(RowSet rs) throws SQLException {
         for (int i = 1; i <= fields.size(); i++) {

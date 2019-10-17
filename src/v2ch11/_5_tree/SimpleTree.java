@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This program shows a simple _5_tree.
+ * This program shows a simple tree.
  *
  * @author Cay Horstmann
  * @version 1.04 2018-05-01

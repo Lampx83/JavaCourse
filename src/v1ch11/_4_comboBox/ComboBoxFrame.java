@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * A frame with a sample _1_text label and a combo box for selecting _4_font faces.
+ * A frame with a sample text label and a combo box for selecting font faces.
  */
 public class ComboBoxFrame extends JFrame {
     private JComboBox<String> faceCombo;
@@ -12,7 +12,7 @@ public class ComboBoxFrame extends JFrame {
     private static final int DEFAULT_SIZE = 24;
 
     public ComboBoxFrame() {
-        // add the sample _1_text label
+        // add the sample text label
 
         label = new JLabel("The quick brown fox jumps over the lazy dog.");
         label.setFont(new Font("Serif", Font.PLAIN, DEFAULT_SIZE));
@@ -27,7 +27,7 @@ public class ComboBoxFrame extends JFrame {
         faceCombo.addItem("Dialog");
         faceCombo.addItem("DialogInput");
 
-        // the combo box listener changes the label _4_font to the selected face name
+        // the combo box listener changes the label font to the selected face name
 
         faceCombo.addActionListener(event ->
                 label.setFont(

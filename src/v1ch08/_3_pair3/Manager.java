@@ -4,7 +4,7 @@ public class Manager extends Employee {
     private double bonus;
 
     /**
-     * @param name   the _4_employee's name
+     * @param name   the employee's name
      * @param salary the salary
      * @param year   the hire year
      * @param month  the hire month

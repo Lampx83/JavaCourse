@@ -26,7 +26,7 @@ public class Employee implements Comparable<Employee> {
      * Compares employees by salary
      *
      * @param other another Employee object
-     * @return a negative value if this _4_employee has a lower salary than
+     * @return a negative value if this employee has a lower salary than
      * otherObject, 0 if the salaries are the same, a positive value otherwise
      */
     public int compareTo(Employee other) {

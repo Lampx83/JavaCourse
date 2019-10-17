@@ -3,7 +3,7 @@ package v1ch05._8_objectAnalyzer;
 import java.util.ArrayList;
 
 /**
- * This program uses _7_reflection to spy on objects.
+ * This program uses reflection to spy on objects.
  *
  * @author Cay Horstmann
  * @version 1.13 2018-03-16

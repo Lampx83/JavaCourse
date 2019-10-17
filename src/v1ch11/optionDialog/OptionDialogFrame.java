@@ -43,7 +43,7 @@ public class OptionDialogFrame extends JFrame {
         gridPanel.add(optionsPanel);
         gridPanel.add(inputPanel);
 
-        // add a panel with a Show _5_button
+        // add a panel with a Show button
 
         var showPanel = new JPanel();
         var showButton = new JButton("Show");
@@ -102,7 +102,7 @@ public class OptionDialogFrame extends JFrame {
     }
 
     /**
-     * The action listener for the Show _5_button shows a Confirm, Input, Message, or Option _9_dialog
+     * The action listener for the Show button shows a Confirm, Input, Message, or Option dialog
      * depending on the Type panel selection.
      */
     private class ShowAction implements ActionListener {

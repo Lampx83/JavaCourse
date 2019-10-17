@@ -30,8 +30,8 @@ public class LoggingImageViewer extends Application {
     private Logger logger = Logger.getLogger("com.horstmann.corejava");
 
     public void start(Stage stage) throws IOException {
-        if (System.getProperty("java.util._2_logging.config.class") == null
-                && System.getProperty("java.util._2_logging.config.file") == null) {
+        if (System.getProperty("java.util.logging.config.class") == null
+                && System.getProperty("java.util.logging.config.file") == null) {
             try {
                 logger.setLevel(Level.ALL);
                 final int LOG_ROTATION_COUNT = 10;
@@ -55,7 +55,7 @@ public class LoggingImageViewer extends Application {
         exitItem.setOnAction(event -> Platform.exit());
         fileMenu.getItems().addAll(openItem, exitItem);
         stage.setScene(new Scene(pane, MIN_SIZE, MIN_SIZE));
-        stage.setTitle("_2_ImageViewer");
+        stage.setTitle("ImageViewer");
 
         logger.addHandler(new WindowHandler(stage, Level.ALL));
         logger.fine("Showing stage");
@@ -66,7 +66,7 @@ public class LoggingImageViewer extends Application {
      * Loads an image.
      *
      * @param stage the stage above which to place the file chooser
-     * @param pane  the pane into which to place the image _4_view
+     * @param pane  the pane into which to place the image view
      */
     public void load(Stage stage, BorderPane pane) {
         logger.entering("LoggingImageViewerFrame", "load",

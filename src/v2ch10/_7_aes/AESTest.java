@@ -10,9 +10,9 @@ import java.security.SecureRandom;
 
 /**
  * This program tests the AES cipher. Usage:<br>
- * java _7_aes.AESTest -genkey keyfile<br>
- * java _7_aes.AESTest -encrypt plaintext encrypted keyfile<br>
- * java _7_aes.AESTest -decrypt encrypted decrypted keyfile<br>
+ * java aes.AESTest -genkey keyfile<br>
+ * java aes.AESTest -encrypt plaintext encrypted keyfile<br>
+ * java aes.AESTest -decrypt encrypted decrypted keyfile<br>
  *
  * @author Cay Horstmann
  * @version 1.02 2018-05-01

@@ -48,7 +48,7 @@ class ImageComponent extends JComponent {
         int imageWidth = image.getWidth(null);
         int imageHeight = image.getHeight(null);
 
-        // _3_draw the image in the upper-left corner
+        // draw the image in the upper-left corner
 
         g.drawImage(image, 0, 0, null);
         // tile the image across the component

@@ -68,7 +68,7 @@ public class TaskDemo extends Application {
                         Platform.runLater(() ->
                                 content.appendText(line + "\n"));
                         lines++;
-                        updateMessage(lines + " lines _2_read");
+                        updateMessage(lines + " lines read");
                     }
                 } catch (InterruptedException e) {
                     // Task was canceled in sleep

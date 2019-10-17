@@ -40,7 +40,7 @@ public class ImageViewer extends Application {
         exitItem.setOnAction(event -> System.exit(0));
         fileMenu.getItems().addAll(openItem, exitItem);
         stage.setScene(new Scene(pane, MIN_SIZE, MIN_SIZE));
-        stage.setTitle("_2_ImageViewer");
+        stage.setTitle("ImageViewer");
         stage.show();
     }
 

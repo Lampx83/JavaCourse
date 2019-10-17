@@ -2,7 +2,7 @@
         <!-- XML-compatible ISO Latin 1 Character Entity Set for XHTML ............ -->
         <!-- file: xhtml-lat1.ent
 
-             Typical _7_invocation:
+             Typical invocation:
 
                <!ENTITY % xhtml-lat1
                    PUBLIC "-//W3C//ENTITIES Latin 1 for XHTML//EN"
@@ -147,7 +147,7 @@
                                      U+00D6 ISOlat1 -->
         <!ENTITY times  "&#215;" ><!-- multiplication sign,
                                      U+00D7 ISOnum -->
-        <!ENTITY Oslash "&#216;" ><!-- latin capital letter O with _10_stroke
+        <!ENTITY Oslash "&#216;" ><!-- latin capital letter O with stroke
                                      = latin capital letter O slash,
                                      U+00D8 ISOlat1 -->
         <!ENTITY Ugrave "&#217;" ><!-- latin capital letter U with grave,
@@ -215,7 +215,7 @@
                                      U+00F6 ISOlat1 -->
         <!ENTITY divide "&#247;" ><!-- division sign,
                                      U+00F7 ISOnum -->
-        <!ENTITY oslash "&#248;" ><!-- latin small letter o with _10_stroke,
+        <!ENTITY oslash "&#248;" ><!-- latin small letter o with stroke,
                                      = latin small letter o slash,
                                      U+00F8 ISOlat1 -->
         <!ENTITY ugrave "&#249;" ><!-- latin small letter u with grave,

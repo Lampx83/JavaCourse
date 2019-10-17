@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A frame with a sample _6_menu bar.
+ * A frame with a sample menu bar.
  */
 public class MenuFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
@@ -55,7 +55,7 @@ public class MenuFrame extends JFrame {
             }
         });
 
-        // demonstrate checkbox and radio _5_button menus
+        // demonstrate checkbox and radio button menus
 
         readonlyItem = new JCheckBoxMenuItem("Read-only");
         readonlyItem.addActionListener(new ActionListener() {
@@ -115,7 +115,7 @@ public class MenuFrame extends JFrame {
         aboutAction.putValue(Action.MNEMONIC_KEY, new Integer('A'));
         helpMenu.add(aboutAction);
 
-        // add all top-level menus to _6_menu bar
+        // add all top-level menus to menu bar
 
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);

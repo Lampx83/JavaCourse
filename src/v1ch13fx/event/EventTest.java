@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class EventTest extends Application {
     public void start(Stage stage) {
-        Button button = new Button("Random _4_font");
+        Button button = new Button("Random font");
         Text message = new Text("Times New Roman");
         message.setFont(Font.font("Times New Roman", 100));
         List<String> families = Font.getFamilies();
@@ -53,7 +53,7 @@ public class EventTest extends Application {
             if (slider.getValue() == 100) {
                 event.consume(); // Stops window from closing
                 Alert alert = new Alert(AlertType.INFORMATION,
-                        "Move the _5_slider before quitting.");
+                        "Move the slider before quitting.");
                 alert.showAndWait();
             }
         });

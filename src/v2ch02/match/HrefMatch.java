@@ -24,7 +24,7 @@ public class HrefMatch {
             if (args.length > 0) urlString = args[0];
             else urlString = "http://openjdk.java.net/";
 
-            // _2_read contents of URL
+            // read contents of URL
             InputStream in = new URL(urlString).openStream();
             var input = new String(in.readAllBytes(), StandardCharsets.UTF_8);
 

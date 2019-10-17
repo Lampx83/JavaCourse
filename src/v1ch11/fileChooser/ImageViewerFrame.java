@@ -5,7 +5,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 
 /**
- * A frame that has a _6_menu for loading an image and a display area for the
+ * A frame that has a menu for loading an image and a display area for the
  * loaded image.
  */
 public class ImageViewerFrame extends JFrame {
@@ -17,7 +17,7 @@ public class ImageViewerFrame extends JFrame {
     public ImageViewerFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // _2_set up _6_menu bar
+        // set up menu bar
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
@@ -29,10 +29,10 @@ public class ImageViewerFrame extends JFrame {
         openItem.addActionListener(event -> {
             chooser.setCurrentDirectory(new File("."));
 
-            // show file chooser _9_dialog
+            // show file chooser dialog
             int result = chooser.showOpenDialog(ImageViewerFrame.this);
 
-            // if image file accepted, _2_set it as icon of the label
+            // if image file accepted, set it as icon of the label
             if (result == JFileChooser.APPROVE_OPTION) {
                 String name = chooser.getSelectedFile().getPath();
                 label.setIcon(new ImageIcon(name));
@@ -48,7 +48,7 @@ public class ImageViewerFrame extends JFrame {
         label = new JLabel();
         add(label);
 
-        // _2_set up file chooser
+        // set up file chooser
         chooser = new JFileChooser();
 
         // accept all image files ending with .jpg, .jpeg, .gif

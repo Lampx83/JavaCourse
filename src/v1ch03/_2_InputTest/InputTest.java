@@ -23,11 +23,11 @@ public class InputTest {
 
 
 //
-//      System.out._15_print("What is your name? ");
+//      System.out.print("What is your name? ");
 //      String name = in.nextLine();
 //
 //      // get second input
-//      System.out._15_print("How old are you? ");
+//      System.out.print("How old are you? ");
 //      int age = in.nextInt();
 //
 //      // display output on console

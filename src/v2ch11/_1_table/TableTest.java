@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.print.PrinterException;
 
 /**
- * This program demonstrates how to show a simple _1_table.
+ * This program demonstrates how to show a simple table.
  *
  * @author Cay Horstmann
  * @version 1.14 2018-05-01
@@ -23,7 +23,7 @@ public class TableTest {
 }
 
 /**
- * This frame contains a _1_table of planet data.
+ * This frame contains a table of planet data.
  */
 class PlanetTableFrame extends JFrame {
     private String[] columnNames = {"Planet", "Radius", "Moons", "Gaseous", "Color"};

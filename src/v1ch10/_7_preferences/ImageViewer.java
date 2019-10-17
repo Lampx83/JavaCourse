@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.prefs.Preferences;
 
 /**
- * A program to _1_test preference settings. The program remembers the
+ * A program to test preference settings. The program remembers the
  * frame position, size, and last selected file.
  *
  * @author Cay Horstmann
@@ -18,7 +18,7 @@ public class ImageViewer {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             var frame = new ImageViewerFrame();
-            frame.setTitle("_2_ImageViewer");
+            frame.setTitle("ImageViewer");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
@@ -27,7 +27,7 @@ public class ImageViewer {
 
 /**
  * An image viewer that restores position, size, and image from user
- * _7_preferences and updates the _7_preferences upon exit.
+ * preferences and updates the preferences upon exit.
  */
 class ImageViewerFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 300;
@@ -36,7 +36,7 @@ class ImageViewerFrame extends JFrame {
 
     public ImageViewerFrame() {
         Preferences root = Preferences.userRoot();
-        Preferences node = root.node("/com/horstmann/corejava/_2_ImageViewer");
+        Preferences node = root.node("/com/horstmann/corejava/ImageViewer");
         // get position, size, title from properties
         int left = node.getInt("left", 0);
         int top = node.getInt("top", 0);
@@ -60,11 +60,11 @@ class ImageViewerFrame extends JFrame {
         // use a label to display the images
         add(label);
 
-        // _2_set up the file chooser
+        // set up the file chooser
         var chooser = new JFileChooser();
         chooser.setCurrentDirectory(new File("."));
 
-        // _2_set up the _6_menu bar
+        // set up the menu bar
         var menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
@@ -74,10 +74,10 @@ class ImageViewerFrame extends JFrame {
         var openItem = new JMenuItem("Open");
         menu.add(openItem);
         openItem.addActionListener(event -> {
-            // show file chooser _9_dialog
+            // show file chooser dialog
             int result = chooser.showOpenDialog(null);
 
-            // if file selected, _2_set it as icon of the label
+            // if file selected, set it as icon of the label
             if (result == JFileChooser.APPROVE_OPTION) {
                 image = chooser.getSelectedFile().getPath();
                 label.setIcon(new ImageIcon(image));

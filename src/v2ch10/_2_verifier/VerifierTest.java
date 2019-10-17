@@ -1,7 +1,7 @@
 package v2ch10._2_verifier;
 
 /**
- * This application demonstrates the bytecode _2_verifier of the virtual machine. If you use a
+ * This application demonstrates the bytecode verifier of the virtual machine. If you use a
  * hex editor to modify the class file, then the virtual machine should detect the tampering.
  *
  * @author Cay Horstmann

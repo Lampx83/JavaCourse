@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * A password chooser that is shown inside a _9_dialog.
+ * A password chooser that is shown inside a dialog.
  */
 public class PasswordChooser extends JPanel {
     private JTextField username;
@@ -26,7 +26,7 @@ public class PasswordChooser extends JPanel {
         panel.add(password = new JPasswordField(""));
         add(panel, BorderLayout.CENTER);
 
-        // create Ok and Cancel buttons that terminate the _9_dialog
+        // create Ok and Cancel buttons that terminate the dialog
 
         okButton = new JButton("Ok");
         okButton.addActionListener(event -> {
@@ -46,7 +46,7 @@ public class PasswordChooser extends JPanel {
     }
 
     /**
-     * Sets the _9_dialog defaults.
+     * Sets the dialog defaults.
      *
      * @param u the default user information
      */
@@ -55,19 +55,19 @@ public class PasswordChooser extends JPanel {
     }
 
     /**
-     * Gets the _9_dialog entries.
+     * Gets the dialog entries.
      *
-     * @return a User object whose state represents the _9_dialog entries
+     * @return a User object whose state represents the dialog entries
      */
     public User getUser() {
         return new User(username.getText(), password.getPassword());
     }
 
     /**
-     * Show the chooser panel in a _9_dialog.
+     * Show the chooser panel in a dialog.
      *
      * @param parent a component in the owner frame or null
-     * @param title  the _9_dialog window title
+     * @param title  the dialog window title
      */
     public boolean showDialog(Component parent, String title) {
         ok = false;
@@ -80,7 +80,7 @@ public class PasswordChooser extends JPanel {
         else
             owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
 
-        // if first time, or if owner has changed, make new _9_dialog
+        // if first time, or if owner has changed, make new dialog
 
         if (dialog == null || dialog.getOwner() != owner) {
             dialog = new JDialog(owner, true);
@@ -89,7 +89,7 @@ public class PasswordChooser extends JPanel {
             dialog.pack();
         }
 
-        // _2_set title and show _9_dialog
+        // set title and show dialog
 
         dialog.setTitle(title);
         dialog.setVisible(true);

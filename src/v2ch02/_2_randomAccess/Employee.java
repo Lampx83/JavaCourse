@@ -32,7 +32,7 @@ public class Employee {
     }
 
     /**
-     * Raises the salary of this _4_employee.
+     * Raises the salary of this employee.
      *
      * @byPercent the percentage of the raise
      */

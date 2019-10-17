@@ -17,7 +17,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * This frame displays the loaded images. The _6_menu has items for loading and saving files.
+ * This frame displays the loaded images. The menu has items for loading and saving files.
  */
 public class ImageIOFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 400;
@@ -118,10 +118,10 @@ public class ImageIOFrame extends JFrame {
     }
 
     /**
-     * Gets a _2_set of "preferred" format names of all image writers. The preferred format name
+     * Gets a set of "preferred" format names of all image writers. The preferred format name
      * is the first format name that a writer specifies.
      *
-     * @return the format name _2_set
+     * @return the format name set
      */
     public static Set<String> getWriterFormats() {
         var writerFormats = new TreeSet<String>();

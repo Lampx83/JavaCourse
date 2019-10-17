@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This frame contains a combo box to choose a composition rule, a _5_slider to change the
+ * This frame contains a combo box to choose a composition rule, a slider to change the
  * source alpha channel, and a component that shows the composition.
  */
 class CompositeTestFrame extends JFrame {
