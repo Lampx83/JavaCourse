@@ -7,7 +7,7 @@ import java.awt.*;
  * A frame with sample text components.
  */
 public class TextComponentFrame extends JFrame {
-    public static final int TEXTAREA_ROWS = 8;
+    public static final int TEXTAREA_ROWS = 8; //
     public static final int TEXTAREA_COLUMNS = 20;
 
     public TextComponentFrame() {
