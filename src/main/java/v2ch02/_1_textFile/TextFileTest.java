@@ -25,14 +25,13 @@ public class TextFileTest {
         }
 
         // retrieve all records into a new array
-        try (var in = new Scanner(
-                new FileInputStream("employee.dat"), "UTF-8")) {
+        try (var in = new Scanner(new FileInputStream("employee.dat"), StandardCharsets.UTF_8)) {
             Employee[] newStaff = readData(in);
-
             // print the newly read employee records
             for (Employee e : newStaff)
                 System.out.println(e);
         }
+
     }
 
     /**

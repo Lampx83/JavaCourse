@@ -127,8 +127,8 @@ class RetireFrame extends JFrame {
         localeCombo.setLocale(currentLocale);
         localeCombo.setSelectedItem(currentLocale);
 
-        res = ResourceBundle.getBundle("retire.RetireResources", currentLocale);
-        resStrings = ResourceBundle.getBundle("retire.RetireStrings", currentLocale);
+        res = ResourceBundle.getBundle("RetireStrings", currentLocale);
+        resStrings = ResourceBundle.getBundle("RetireStrings", currentLocale);
         currencyFmt = NumberFormat.getCurrencyInstance(currentLocale);
         numberFmt = NumberFormat.getNumberInstance(currentLocale);
         percentFmt = NumberFormat.getPercentInstance(currentLocale);

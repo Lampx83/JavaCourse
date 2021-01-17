@@ -2,7 +2,11 @@ package v2ch02.zip;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -35,15 +39,15 @@ public class ZipTest {
     }
 
     public static void showContents2(String zipname) throws IOException {
-//        FileSystem fs = FileSystems.newFileSystem(Paths.get(zipname), null);
-//        Files.walkFileTree(fs.getPath("/"), new SimpleFileVisitor<Path>() {
-//            public FileVisitResult visitFile(Path path, BasicFileAttributes attrs)
-//                    throws IOException {
-//                System.out.println(path);
-//                for (String line : Files.readAllLines(path, Charset.forName("UTF-8")))
-//                    System.out.println("   " + line);
-//                return FileVisitResult.CONTINUE;
-//            }
-//        });
+        FileSystem fs = FileSystems.newFileSystem(Paths.get(zipname), (Map<String, ?>) null);
+        Files.walkFileTree(fs.getPath("/"), new SimpleFileVisitor<Path>() {
+            public FileVisitResult visitFile(Path path, BasicFileAttributes attrs)
+                    throws IOException {
+                System.out.println(path);
+                for (String line : Files.readAllLines(path, Charset.forName("UTF-8")))
+                    System.out.println("   " + line);
+                return FileVisitResult.CONTINUE;
+            }
+        });
     }
 }

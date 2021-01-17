@@ -8,7 +8,7 @@ import java.awt.*;
  * @author Cay Horstmann
  * @version 1.21 2001-08-27
  */
-public class RetireResources extends java.util.ListResourceBundle {
+public class RetireResources_en_US extends java.util.ListResourceBundle {
     private static final Object[][] contents = {
             // BEGIN LOCALIZE
             {"colorPre", Color.blue}, {"colorGain", Color.white}, {"colorLoss", Color.red}
